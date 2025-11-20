@@ -13,7 +13,7 @@ import DataAccess.DatabaseConnector.ConnectManager;
 public abstract class AbtractAccessDatabase<T> {
 //    protected BeanListHandler<T> beanListHandler;
 //    protected BeanHandler<T> beanHandler;
-    protected ResultSetHandler<T> resultSetHandler;
+    protected ResultSetHandler<T> resultSetHandler; // Thư viện apache.commons.dbutil, là một interface
     protected ResultSetHandler<List<T>> resultSetHandlerList;
     protected final QueryRunner queryRunner = new QueryRunner();
     protected final ConnectManager connectManager = new ConnectManager();
@@ -31,8 +31,8 @@ public abstract class AbtractAccessDatabase<T> {
         return null;
     }
 
-    protected boolean executeUpdate(String query, Object... params) {
-        getNewConnectionManager();
+    protected boolean executeUpdate(String query, Object... params) { // T là generic type
+        getNewConnectionManager(); // mở kết nối
         try{
             int result = queryRunner.update(connectManager.getConnection(), query, params);
             return checkUpdateSuccess(result);
@@ -57,7 +57,7 @@ public abstract class AbtractAccessDatabase<T> {
     }
 
     protected void setClazz(Class<T> clazz) {
-        this.resultSetHandler = new BeanHandler<>(clazz);
+         
         this.resultSetHandlerList = new BeanListHandler<>(clazz);
     }
 
