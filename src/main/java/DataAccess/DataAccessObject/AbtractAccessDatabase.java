@@ -5,15 +5,14 @@ import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
-import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
-
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import DataAccess.DatabaseConnector.ConnectManager;
 
 public abstract class AbtractAccessDatabase<T> {
 //    protected BeanListHandler<T> beanListHandler;
 //    protected BeanHandler<T> beanHandler;
-    protected ResultSetHandler<T> resultSetHandler; // Thư viện apache.commons.dbutil, là một interface
+    protected ResultSetHandler<T> resultSetHandler; // Thư viện apache.commons.dbutil, ResultSetHandler là một interface
     protected ResultSetHandler<List<T>> resultSetHandlerList;
     protected final QueryRunner queryRunner = new QueryRunner();
     protected final ConnectManager connectManager = new ConnectManager();
@@ -58,7 +57,8 @@ public abstract class AbtractAccessDatabase<T> {
 
     protected void setClazz(Class<T> clazz) {
          
-        this.resultSetHandlerList = new BeanListHandler<>(clazz);
+        this.resultSetHandlerList = new BeanListHandler<>(clazz); //BeanListHandler là một class
+        this.resultSetHandler = new BeanHandler<>(clazz);
     }
 
     private void getNewConnectionManager(){
