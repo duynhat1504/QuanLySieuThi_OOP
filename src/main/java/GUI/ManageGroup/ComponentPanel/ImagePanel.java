@@ -4,7 +4,7 @@
  */
 package GUI.ManageGroup.ComponentPanel;
 
-import GUI.SaleGroup.LoginGui.Background.*;
+import GUI.LoginGUI.Background.*;
 import static GUI.SaleGroup.SellerGUI.Component.ImagePanel.imgDirectory;
 import static GUI.SaleGroup.SellerGUI.Component.ImagePanel.imgExtension;
 import java.awt.AlphaComposite;

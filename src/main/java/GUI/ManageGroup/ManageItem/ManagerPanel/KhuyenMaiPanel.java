@@ -598,6 +598,7 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
     }
 
 
+
     private GUI.LoginGUI.Component.Button button2;
     private GUI.LoginGUI.Component.Button button3;
     private GUI.LoginGUI.Component.Button button5;

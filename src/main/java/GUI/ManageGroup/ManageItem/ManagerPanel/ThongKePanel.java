@@ -9,12 +9,12 @@ import BUS.BusAccessor.PhieuHuyBUS;
 import BUS.BusAccessor.PhieuNhapBUS;
 import BUS.BusAccessor.ThongKeBUS;
 import BUS.SaleServices.Money;
-import DTO.HoaDon;
-import DTO.KhachHang;
-import DTO.NhanVien;
-import DTO.PhieuHuy;
-import DTO.PhieuNhap;
-import DTO.SanPham;
+import DataTransfer.HoaDon;
+import DataTransfer.KhachHang;
+import DataTransfer.NhanVien;
+import DataTransfer.PhieuHuy;
+import DataTransfer.PhieuNhap;
+import DataTransfer.SanPham;
 import GUI.ManageGroup.Theme.NhapHuyPanel;
 import com.raven.datechooser.DateChooser;
 import com.raven.datechooser.SelectedDate;
@@ -104,7 +104,7 @@ public class ThongKePanel extends javax.swing.JPanel {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel122 = new javax.swing.JLabel();
-        button20 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button20 = new GUI.LoginGUI.Component.Button();
         jLabel36 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
@@ -601,7 +601,7 @@ public class ThongKePanel extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private GUI.SaleGroup.LoginGui.Component.Button button20;
+    private GUI.LoginGUI.Component.Button button20;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

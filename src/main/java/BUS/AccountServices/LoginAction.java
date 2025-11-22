@@ -4,13 +4,15 @@ import DataAccess.DataAccessObject.LoginDetailDAO;
 import DataAccess.DataAccessObject.TaiKhoanDAO;
 import DataTransfer.LoaiSanPham;
 import DataTransfer.NhaCungCap;
+import GUI.ManageGroup.ManageItem.ManagerFrame.ManageFrame;
+import GUI.ManageGroup.ManageItem.ManagerPanel.NhapXuatPanel;
 
 import java.sql.Timestamp;
 
 public class LoginAction {
     private final TaiKhoanDAO taiKhoanDAO;
     private final LoginDetailDAO loginDetailDAO;
-//    public ManagerFrame manager;
+    public ManageFrame manager;
     private LoaiSanPham.LoginDetail loginDetail;
     private final int AUTH_KEY_EXPIRE_TIME = 1000*60*60*2;
     private int soTK;
@@ -19,9 +21,11 @@ public class LoginAction {
         taiKhoanDAO = new TaiKhoanDAO();
         loginDetailDAO = new LoginDetailDAO();
     }
-//    public LoginAction(ManagerFrame manager){
-//        this.manager = manager;
-//    }
+    public LoginAction(ManageFrame manager){
+        this.manager = manager;
+        taiKhoanDAO = new TaiKhoanDAO();
+        loginDetailDAO = new LoginDetailDAO();
+    }
     public boolean loginInput(String username, String password, boolean rememberLogin){
         this.rememberLogin = rememberLogin;
         NhaCungCap.TaiKhoan tk = taiKhoanDAO.selectByTenTK(username);
@@ -59,7 +63,9 @@ public class LoginAction {
 
     public void showFrame(){
         System.out.println("Khoi tao frame nhan vien quan ly");
-
+        ManageFrame.maNV = taiKhoanDAO.select(soTK).getMaNV();
+        NhapXuatPanel.maNhanVien = ManageFrame.maNV;
+        manager.setVisible(true);
     }
     protected void storeLoginAuth(boolean rememberLogin){
         if(rememberLogin){

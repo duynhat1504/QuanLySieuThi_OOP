@@ -5,7 +5,7 @@
 package GUI.ManageGroup.Handle.VoucherHandle;
 
 import BUS.SaleServices.CheckInfoSale;
-import DTO.Voucher;
+import DataTransfer.Voucher;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
@@ -92,45 +92,3 @@ public class VoucherValidate {
      
      
     
-    
-    
-    
-    
-    
-    
-    //    public Timestamp ConvertDay(String startDay)    {
-////       SimpleDateFormat format = new java.text.SimpleDateFormat("dd-MM-yyyy");
-//   
-//        DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-//        
-//        try {
-//            TemporalAccessor temp = formatDateTime.parse(startDay);
-//            System.out.println(temp);
-//            LocalDateTime localDateTime = LocalDateTime.from(temp);
-//                           Timestamp ts = Timestamp.valueOf(localDateTime);
-//                      System.out.println(ts);
-//        } catch (Exception e){
-//            System.out.println("loi");
-//        }
-//        return null;
-//    }
-//       Timestamp ts = Timestamp.valueOf(localDateTime);
-//        return ts;
-//    }
-
-//     public static void main(String[] args){
-//         VoucherValidate vv = new VoucherValidate();
-//         vv.ConvertDay("1/12/2002 3:05:13");
-//         
-//         String dateTime = "01/10/2020 06:43:21";
-//        DateTimeFormatter formatDateTime = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-//        try {
-//            LocalDateTime localDateTime = LocalDateTime.from(formatDateTime.parse(dateTime));
-//               Timestamp ts = Timestamp.valueOf(localDateTime);
-//                      System.out.println(ts);
-//        } catch(Exception e){
-//            System.out.println("Eroor");
-//        }
-        
-//     }
-}
