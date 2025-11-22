@@ -1,17 +1,20 @@
 
 package GUI.ManageGroup.ManageItem.ManageFrame;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+// import java.awt.Color;
+// import javax.swing.UIManager;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.ImageIcon;
+import javax.swing.Timer;
+
 import BUS.AccountServices.LoginAction;
 import BUS.AccountServices.LogoutAction;
 import GUI.ManageGroup.Theme.ManagerTheme;
-
-import javax.swing.ImageIcon;
 import GUI.SaleGroup.LoginGui.LoginFrame.LoginGui;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import javax.swing.Timer;
 
 public class ManageFrame extends javax.swing.JFrame {
      public static int maNV;
@@ -22,11 +25,14 @@ public class ManageFrame extends javax.swing.JFrame {
         this.loginGui = loginGui;
         this.logAct = logAct;
         ManagerTheme.setup();
+        // // Ensure hover color for TabbedPane is white (override theme if needed)
+        // UIManager.put("TabbedPane.hoverColor", Color.WHITE);
+        // UIManager.put("TabbedPane.hoverBackground", Color.WHITE);
         initComponents();
         customsizeTabbedPane();
         init();
         this.setLocationRelativeTo(null);
-        this.setResizable(false);
+        this.setResizable(true);
     }
 
     public LoginAction getLogAct() {
@@ -102,10 +108,12 @@ public class ManageFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        shape1.setBackground(new java.awt.Color(42, 148, 208));
+        // shape1.setBackground(new java.awt.Color(42, 148, 208));
+        shape1.setBackground(new java.awt.Color(128, 0, 0));
         shape1.setRadi(0);
 
-        TabbedPane.setBackground(new java.awt.Color(42, 148, 208));
+        // TabbedPane.setBackground(new java.awt.Color(42, 148, 208));
+        TabbedPane.setBackground(new java.awt.Color(128, 0, 0));
         TabbedPane.setForeground(new java.awt.Color(255, 255, 255));
         TabbedPane.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         TabbedPane.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -244,6 +252,7 @@ public class ManageFrame extends javax.swing.JFrame {
 //            java.util.logging.Logger.getLogger(ManageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 //        }
 //        //</editor-fold>
+
         ManagerTheme.setup();
         
         java.awt.EventQueue.invokeLater(new Runnable() {

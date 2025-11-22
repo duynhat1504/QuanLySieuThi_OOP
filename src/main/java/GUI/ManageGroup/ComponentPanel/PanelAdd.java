@@ -29,7 +29,8 @@ public class PanelAdd extends javax.swing.JPanel {
 
         Graphics2D g2d = (Graphics2D) g.create();
         Color xanh = Color.decode("#7EBBDE");
-//        Color xanhnhat = Color.decode("#D3F5FF");
+        // Color đỏ = Color.decode("#FF0000");
+        // Color xanhnhat = Color.decode("#D3F5FF");
         g2d.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setColor(xanh);
         g2d.fillRoundRect(getWidth() / 7, 0, getWidth() - getWidth() / 7, getHeight(), 100, 100);

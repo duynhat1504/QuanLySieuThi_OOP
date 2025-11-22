@@ -1,14 +1,14 @@
 package BUS.BusAccessor;
 
-import DataAccess.DataAcessObject.NhanVienDAO;
-import DAL.DataAcessObject.SanPhamDAO;
-import DTO.ChiTietHoaDon;
-import DTO.NhanVien;
-import DTO.SanPham;
+import DataAccess.DataAccessObject.NhanVienDAO;
+import DataAccess.DataAccessObject.SanPhamDAO;
+import DataTransfer.ChiTietHoaDon;
+import DataTransfer.NhanVien;
+import DataTransfer.SanPham;
 import java.util.ArrayList;
 import java.util.List;
 
-public  class SanPhamBUS implements IBussAccess<SanPham, Integer>{
+public  class SanPhamBUS implements IBusAccess<SanPham, Integer>{
     private final SanPhamDAO sanPhamDAO =new  SanPhamDAO();
     private final LoaiSanPhamBUS loaiSPBus = new LoaiSanPhamBUS();
     private final CTHoaDonBUS ctHoaoDonBus = new CTHoaDonBUS();

@@ -29,6 +29,7 @@ public class PanelVoucher extends javax.swing.JPanel {
         shape1 = new GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd.Shape();
 
         shape1.setBackground(new java.awt.Color(43, 133, 161));
+        //shape1.setBackground(new java.awt.Color(128, 0, 0));
         shape1.setOpaque(false);
 
         javax.swing.GroupLayout shape1Layout = new javax.swing.GroupLayout(shape1);
