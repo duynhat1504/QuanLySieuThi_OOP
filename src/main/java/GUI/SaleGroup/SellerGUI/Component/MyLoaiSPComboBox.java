@@ -5,8 +5,8 @@
 package GUI.SaleGroup.SellerGUI.Component;
 
 import BUS.BusAccessor.LoaiSanPhamBUS;
-import DAL.DataAcessObject.LoaiSanPhamDAO;
-import DTO.LoaiSanPham;
+import DataAccess.DataAcessObject.LoaiSanPhamDAO;
+import DataTransfer.LoaiSanPham;
 import GUI.SaleGroup.SellerGUI.BasicHandle.ComboBoxLoaiSPAction;
 import GUI.SaleGroup.SellerGUI.BasicHandle.ComboboxLoaiSanPhamRender;
 import java.util.List;

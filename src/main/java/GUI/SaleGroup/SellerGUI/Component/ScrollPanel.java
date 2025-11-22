@@ -49,7 +49,7 @@ public class ScrollPanel extends JScrollPane{
  
     }
     
-//    public MyPanel addToPanel(MyPanel comp){
+//    public MyPanel adDataTransferPanel(MyPanel comp){
 //        Component com = panel.add(comp);
 //        panel.revalidate();
 //        panel.repaint();
@@ -69,7 +69,7 @@ public class ScrollPanel extends JScrollPane{
         if (panel.getComponentCount() == 0 || getChildComponentSize().getWidth() == 0 || getChildComponentSize().getHeight() == 0)
             return (int) 0;
         int maxInCol = (int) (panel.getPreferredSize().getWidth() / getChildComponentSize().getWidth());
-        int maxInRow = roundToNextInt(panel.getComponentCount()*1.0 / maxInCol);
+        int maxInRow = rounDataTransferNextInt(panel.getComponentCount()*1.0 / maxInCol);
 //        System.out.println("Max row: "+maxInRow);
         maxInRow = maxInRow == 0 ? 1 : maxInRow;
         int height = (int) (maxInRow*((getChildComponentSize().getHeight())+(hGap+1)));
@@ -77,7 +77,7 @@ public class ScrollPanel extends JScrollPane{
         return height;
     }
     
-    protected int roundToNextInt(double num){
+    protected int rounDataTransferNextInt(double num){
         if (num % 1==0){
             return (int) num;
         }

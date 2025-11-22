@@ -4,7 +4,7 @@
  */
 package GUI.SaleGroup.SellerGUI.BasicHandle;
 
-import DTO.LoaiSanPham;
+import DataTransfer.LoaiSanPham;
 import java.awt.Component;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JList;

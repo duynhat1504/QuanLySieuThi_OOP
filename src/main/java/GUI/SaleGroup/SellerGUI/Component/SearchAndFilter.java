@@ -5,7 +5,7 @@
 package GUI.SaleGroup.SellerGUI.Component;
 
 import BUS.BusAccessor.SanPhamBUS;
-import DTO.SanPham;
+import DataTransfer.SanPham;
 import GUI.ManageGroup.Theme.TimKiemNangCaoTheme;
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
@@ -185,7 +185,7 @@ public class SearchAndFilter extends javax.swing.JFrame {
         }
         List<SanPham> list = spBUS.advancedFilter(jTextField2.getText(), Long.toString(min), Long.toString(max), 
                 myLoaiSPComboBox1.getSelectedItem().getMaLoai(), strNCC);
-        this.menu.addToPanel(list);
+        this.menu.adDataTransferPanel(list);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 

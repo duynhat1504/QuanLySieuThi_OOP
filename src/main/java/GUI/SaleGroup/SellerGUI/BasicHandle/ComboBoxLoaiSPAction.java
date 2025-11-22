@@ -5,8 +5,8 @@
 package GUI.SaleGroup.SellerGUI.BasicHandle;
 
 import BUS.BusAccessor.SanPhamBUS;
-import DTO.LoaiSanPham;
-import DTO.SanPham;
+import DataTransfer.LoaiSanPham;
+import DataTransfer.SanPham;
 import GUI.SaleGroup.SellerGUI.Component.MenuPanel;
 import GUI.SaleGroup.SellerGUI.Component.MyLoaiSPComboBox;
 import java.awt.event.ActionEvent;
@@ -36,7 +36,7 @@ public class ComboBoxLoaiSPAction implements ActionListener{
 //        System.out.println("Click value: "+ bx.getSelectedMaLoai());
         int maLoaiHienTai = bx.getSelectedMaLoai();
         List<SanPham> list = spBus.getProductByTypeAndName(maLoaiHienTai, searchField.getText());
-        menu.addToPanel(list);
+        menu.adDataTransferPanel(list);
     }
     
 }

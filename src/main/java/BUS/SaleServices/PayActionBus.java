@@ -4,8 +4,8 @@
  */
 package BUS.SaleServices;
 
-import DAL.DataAcessObject.*;
-import DTO.*;
+import DataAccess.DataAcessObject.*;
+import DataTransfer.*;
 
 import java.sql.Timestamp;
 import java.util.List;

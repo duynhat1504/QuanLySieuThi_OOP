@@ -5,7 +5,7 @@
 package GUI.SaleGroup.SellerGUI.BasicHandle;
 
 import BUS.SaleServices.CheckInfoSale;
-import DTO.SanPham;
+import DataTransfer.SanPham;
 import GUI.SaleGroup.SellerGUI.Component.OrderPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

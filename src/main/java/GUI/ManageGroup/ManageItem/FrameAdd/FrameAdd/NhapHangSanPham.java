@@ -8,9 +8,9 @@ import BUS.BusAccessor.CTPhieuNhapBUS;
 import BUS.BusAccessor.NhanVienBUS;
 import BUS.BusAccessor.PhieuNhapBUS;
 import BUS.BusAccessor.SanPhamBUS;
-import DTO.ChiTietPhieuNhap;
-import DTO.PhieuNhap;
-import DTO.SanPham;
+import DataTransfer.ChiTietPhieuNhap;
+import DataTransfer.PhieuNhap;
+import DataTransfer.SanPham;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.NhapHangSanPham;
 import GUI.ManageGroup.Theme.NhapXuatTheme;
 import com.formdev.flatlaf.FlatLightLaf;
@@ -164,7 +164,7 @@ public class NhapHangSanPham extends javax.swing.JFrame {
         }
     }
     
-    public void addToDatabase(int maSP, int soLuong) {
+    public void adDataTransferDatabase(int maSP, int soLuong) {
         ChiTietPhieuNhap ctpn = new ChiTietPhieuNhap(this.maPhieuNhap, maSP, soLuong);
         ctPhieuNhapBus.add(ctpn);
     }
@@ -649,7 +649,7 @@ public class NhapHangSanPham extends javax.swing.JFrame {
                nhapBus.add(pn);
                this.maPhieuNhap = nhapBus.getNewest().getMaPhieu();
                for (ChiTietPhieuNhap ct : convertedList) {
-                   addToDatabase(ct.getMaSP(), ct.getSoLuong());
+                   adDataTransferDatabase(ct.getMaSP(), ct.getSoLuong());
                }
                this.setVisible(false);
                this.dispose();
@@ -674,7 +674,7 @@ public class NhapHangSanPham extends javax.swing.JFrame {
                removeFromDatabase(ct.getMaSP());
            
            for (ChiTietPhieuNhap ct: convertedList)
-               addToDatabase(ct.getMaSP(), ct.getSoLuong());
+               adDataTransferDatabase(ct.getMaSP(), ct.getSoLuong());
             this.setVisible(false);
             this.dispose();
        }

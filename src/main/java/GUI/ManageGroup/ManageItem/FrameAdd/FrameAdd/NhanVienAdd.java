@@ -7,7 +7,7 @@ package GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd;
 import BUS.BusAccessor.NhanVienBUS;
 import GUI.ManageGroup.Handle.NhanVienHandle.NhanVienToData;
 import GUI.ManageGroup.Handle.NhanVienHandle.NhanVienValidate;
-import DTO.NhanVien;
+import DataTransfer.NhanVien;
 import GUI.ManageGroup.ManageItem.ManagerPanel.NhanVienPanel;
 import GUI.ManageGroup.Theme.NhanVienAddTheme;
 import GUI.ManageGroup.Theme.NhapHuyPanel;

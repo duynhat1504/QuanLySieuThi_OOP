@@ -5,8 +5,8 @@
 package GUI.SaleGroup.SellerGUI.Component;
 
 import BUS.BusAccessor.SanPhamBUS;
-import DAL.DataAcessObject.SanPhamDAO;
-import DTO.SanPham;
+import DataAccess.DataAcessObject.SanPhamDAO;
+import DataTransfer.SanPham;
 import GUI.SaleGroup.SellerGUI.BasicHandle.HandleClickAddEvent;
 import java.awt.Dimension;
 import java.util.ArrayList;
@@ -30,30 +30,30 @@ public class MenuPanel extends ScrollPanel{
 //    
 //    public void getAllProduct(){
 //        List<SanPham> list = spDAO.selectAll();
-//        addToPanel(list);
+//        adDataTransferPanel(list);
 //    }
 //    //Done
 //    public void getProductByType(int maLoai){
 //        List<SanPham> list = spDAO.selectByLoaiSP(maLoai);
-//        addToPanel(list);
+//        adDataTransferPanel(list);
 //    }
 //    
 //    public void getProductByName(String name){
 //        List<SanPham> list = spDAO.selectByTenSP(name);
-//        addToPanel(list);
+//        adDataTransferPanel(list);
 //    }
 //    
 //    public void getProductByNameAndType(int maLoai, String name){
 //        if (maLoai == 0){
 //            List<SanPham> list = spDAO.selectByTenSP(name);
-//            addToPanel(list);
+//            adDataTransferPanel(list);
 //            return;
 //        }
 //        List<SanPham> list = spDAO.selectByTenSPAndLoaiSP(maLoai, name);
-//        addToPanel(list);
+//        adDataTransferPanel(list);
 //    }
 
-    public void addToPanel(SanPham sp) {
+    public void adDataTransferPanel(SanPham sp) {
         MenuItem item = new MenuItem(sp);
         item.getButtonAdd().addActionListener(new HandleClickAddEvent(sp, orderpanel));
         this.panel.add(item);
@@ -63,11 +63,11 @@ public class MenuPanel extends ScrollPanel{
         this.panel.setPreferredSize(new Dimension((int)this.panel.getPreferredSize().getWidth(),calculateHeight()));
     }
     
-    public void addToPanel(List<SanPham> list) {
+    public void adDataTransferPanel(List<SanPham> list) {
         this.removeAll();
         this.listData = list;
         for (SanPham sp: list){
-            addToPanel(sp);
+            adDataTransferPanel(sp);
         }
     }
     
@@ -85,7 +85,7 @@ public class MenuPanel extends ScrollPanel{
 
     public void showProducts() {
         List<SanPham> list = spbus.getAll();
-        this.addToPanel(list);
+        this.adDataTransferPanel(list);
     }
 
    

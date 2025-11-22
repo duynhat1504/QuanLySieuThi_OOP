@@ -5,8 +5,8 @@
 package GUI.ManageGroup.Handle.NhanVienHandle;
 
 import BUS.BusAccessor.NhanVienBUS;
-import DAL.DataAcessObject.NhanVienDAO;
-import DTO.NhanVien;
+import DataAccess.DataAcessObject.NhanVienDAO;
+import DataTransfer.NhanVien;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.text.ParseException;

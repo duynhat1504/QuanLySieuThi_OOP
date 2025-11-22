@@ -35,7 +35,7 @@ public class OrderPanel extends ScrollPanel{
         return bnThanhToan;
     }
     
-    public void addToPanel(SanPham sp) {
+    public void adDataTransferPanel(SanPham sp) {
         OrderItem item = new OrderItem(sp);
         item.getButtonRemove().addActionListener(new RemoveOrderItemAction(item, this));
         item.getJTextFieldQuantity().getDocument().addDocumentListener(new SpinQuantityAction(item, this));
@@ -46,9 +46,9 @@ public class OrderPanel extends ScrollPanel{
         this.panel.setPreferredSize(new Dimension((int)this.panel.getPreferredSize().getWidth(),calculateHeight()));
     }
 
-    public void addToPanel(List<SanPham> list) {
+    public void adDataTransferPanel(List<SanPham> list) {
         for (SanPham sp: list){
-            addToPanel(sp);
+            adDataTransferPanel(sp);
         }
     }
 
@@ -118,7 +118,7 @@ public class OrderPanel extends ScrollPanel{
     public void addOrderItemOrIncrementByOne(SanPham sp){
         OrderItem orderitem = getOrderItem(sp.getMaSP());
         if (orderitem == null){
-            this.addToPanel(sp);   
+            this.adDataTransferPanel(sp);   
         }else{
             SanPhamBUS sanphamBus = new SanPhamBUS();
             if(sanphamBus.get(sp.getMaSP()).getSoLuong() >= (orderitem.getQuantity() + 1L)){

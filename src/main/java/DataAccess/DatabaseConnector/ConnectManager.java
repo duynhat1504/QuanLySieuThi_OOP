@@ -21,7 +21,7 @@ public class ConnectManager {
         Properties properties = new Properties();
         try {
             // Đường dẫn tài nguyên trên classpath
-            String resourcePath = "DAL/DatabaseConnector/dbconfig.properties";
+            String resourcePath = "DataAccess/DatabaseConnector/dbconfig.properties";
             
             // Tải file từ classpath
             InputStream is = getClass().getClassLoader().getResourceAsStream(resourcePath);

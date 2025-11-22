@@ -1,8 +1,8 @@
 
 package GUI.ManageGroup.Handle.SanPhamHandle;
 
-import DAL.DataAcessObject.SanPhamDAO;
-import DTO.SanPham;
+import DataAccess.DataAcessObject.SanPhamDAO;
+import DataTransfer.SanPham;
 
 
 public class SanPhamToData {

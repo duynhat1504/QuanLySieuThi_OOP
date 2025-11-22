@@ -35,7 +35,7 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         FlatLightLaf.setup();
         initComponents();
         init();
-        loadAllTable();
+        loaDataAccesslTable();
     }
 
    
@@ -691,7 +691,7 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
 
     }
     
-    public void loadAllTable(){
+    public void loaDataAccesslTable(){
         loadDataTableVoucher();
         loadDataTableDiscountProduct();
     }

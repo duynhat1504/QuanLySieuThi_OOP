@@ -6,7 +6,7 @@ package GUI.SaleGroup.SellerGUI.BasicHandle;
 
 import BUS.SaleServices.Money;
 import BUS.SaleServices.PayActionBus;
-import DTO.ChiTietHoaDon;
+import DataTransfer.ChiTietHoaDon;
 import BUS.Excel.PDFTool;
 import GUI.SaleGroup.SellerGUI.Component.OptionPaneBill;
 import GUI.SaleGroup.SellerGUI.Component.OrderPanel;

@@ -4,8 +4,8 @@
  */
 package GUI.SaleGroup.SellerGUI.BasicHandle;
 
-import DAL.DataAcessObject.KhachHangDAO;
-import DTO.KhachHang;
+import DataAccess.DataAcessObject.KhachHangDAO;
+import DataTransfer.KhachHang;
 
 /**
  *

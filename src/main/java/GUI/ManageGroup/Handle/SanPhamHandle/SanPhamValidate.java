@@ -6,8 +6,8 @@ package GUI.ManageGroup.Handle.SanPhamHandle;
 
 import BUS.BusAccessor.LoaiSanPhamBUS;
 import BUS.BusAccessor.NhaCungCapBUS;
-import DTO.SanPham;
-import DTO.Voucher;
+import DataTransfer.SanPham;
+import DataTransfer.Voucher;
 import javax.swing.JOptionPane;
 
 

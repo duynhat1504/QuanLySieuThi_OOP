@@ -10,11 +10,11 @@ import BUS.BusAccessor.NhanVienBUS;
 import BUS.BusAccessor.PhieuHuyBUS;
 import BUS.BusAccessor.PhieuNhapBUS;
 import BUS.BusAccessor.SanPhamBUS;
-import DTO.ChiTietPhieuHuy;
-import DTO.ChiTietPhieuNhap;
-import DTO.PhieuHuy;
-import DTO.PhieuNhap;
-import DTO.SanPham;
+import DataTransfer.ChiTietPhieuHuy;
+import DataTransfer.ChiTietPhieuNhap;
+import DataTransfer.PhieuHuy;
+import DataTransfer.PhieuNhap;
+import DataTransfer.SanPham;
 import GUI.ManageGroup.Theme.NhapXuatTheme;
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
@@ -167,7 +167,7 @@ public class HuyHangSanPham extends javax.swing.JFrame {
         }
     }
     
-    public void addToDatabase(int maSP, int soLuong) {
+    public void adDataTransferDatabase(int maSP, int soLuong) {
         ChiTietPhieuHuy ctpn = new ChiTietPhieuHuy(this.maPhieuHuy, maSP, soLuong);
         ctPhieuHuyBus.add(ctpn);
     }
@@ -671,7 +671,7 @@ public class HuyHangSanPham extends javax.swing.JFrame {
                 huyBUS.add(ph);
                 this.maPhieuHuy = huyBUS.getNewest().getMaPhieu();
                 for (ChiTietPhieuHuy ct : convertedList) {
-                    addToDatabase(ct.getMaSP(), ct.getSoLuong());
+                    adDataTransferDatabase(ct.getMaSP(), ct.getSoLuong());
                 }
                 this.setVisible(false);
                 this.dispose();
@@ -696,7 +696,7 @@ public class HuyHangSanPham extends javax.swing.JFrame {
                removeFromDatabase(ct.getMaSP());
            
            for (ChiTietPhieuHuy ct: convertedList)
-               addToDatabase(ct.getMaSP(), ct.getSoLuong());
+               adDataTransferDatabase(ct.getMaSP(), ct.getSoLuong());
             this.setVisible(false);
             this.dispose();
        }

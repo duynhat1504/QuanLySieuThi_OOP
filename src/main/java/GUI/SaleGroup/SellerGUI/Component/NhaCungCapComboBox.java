@@ -5,8 +5,8 @@
 package GUI.SaleGroup.SellerGUI.Component;
 
 import BUS.BusAccessor.NhaCungCapBUS;
-import DTO.LoaiSanPham;
-import DTO.NhaCungCap;
+import DataTransfer.LoaiSanPham;
+import DataTransfer.NhaCungCap;
 import java.awt.Component;
 import java.util.List;
 import javax.swing.DefaultListCellRenderer;

@@ -5,7 +5,7 @@
 package GUI.SaleGroup.SellerGUI.BasicHandle;
 
 import BUS.BusAccessor.SanPhamBUS;
-import DTO.SanPham;
+import DataTransfer.SanPham;
 import GUI.SaleGroup.SellerGUI.Component.MenuPanel;
 import GUI.SaleGroup.SellerGUI.Component.MyLoaiSPComboBox;
 import java.util.List;
@@ -47,7 +47,7 @@ public class SearchMenuListener implements DocumentListener{
     public void changeOnText(){
         int maLoaiHienTai = bx.getSelectedMaLoai();
         List<SanPham> list = spBus.getProductByTypeAndName(maLoaiHienTai, searchField.getText());
-        menu.addToPanel(list);
+        menu.adDataTransferPanel(list);
     }
     
 }
