@@ -2,8 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package GUI.ManageGroup.ComponentPanel;
+package GUI.SaleGroup.LoginGui.Background;
 
+/**
+ *
+ * @author ACER
+ */
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -12,39 +16,30 @@ import java.awt.Graphics2D;
  *
  * @author ACER
  */
-public class PanelAdd extends javax.swing.JPanel {
-
-    /**
-     * Creates new form PanelAdd
-     */
-    public PanelAdd() {
-        initComponents();
-    }
+public class PhoneGui2 extends javax.swing.JPanel {
 
     {
         setOpaque(false);
     }
-
-    protected void paintComponent(Graphics g) {
-
-        Graphics2D g2d = (Graphics2D) g.create();
-        Color xanh = Color.decode("#7EBBDE");
-        // Color đỏ = Color.decode("#FF0000");
-        // Color xanhnhat = Color.decode("#D3F5FF");
-        g2d.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-        g2d.setColor(xanh);
-        g2d.fillRoundRect(getWidth() / 7, 0, getWidth() - getWidth() / 7, getHeight(), 100, 100);
-        g2d.setColor(xanh);
-        g2d.fillRoundRect(0, 0, getWidth() / 5, getHeight() - 5, 100, 100);
-        g2d.setColor(Color.decode("#FFFFFF"));
-        g2d.fillRoundRect(2, 2, getWidth() / 5 - 4, getHeight() - 5 - 4, 100, 100);
-        
-        g2d.dispose();
-        super.paintComponent(g);
-
+    public PhoneGui2() {
+        initComponents(); 
     }
 
-    @SuppressWarnings("unchecked")
+   protected void paintComponent(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g.create();
+        g2d.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+        Color xanh = Color.decode("#c8e9fa");
+        Color xanhdam = Color.decode("#b5dff5");
+        g2d.setColor(xanhdam);
+        g2d.fillRoundRect(20, getHeight()/14 + 10, getWidth()-getWidth()/14, getHeight()- getHeight()/10, 120, 120);
+        g2d.setColor(xanh);
+        g2d.fillRoundRect(getWidth()/14, 10, getWidth() - getWidth() / 14, getHeight() - getHeight() / 17, 120, 120);
+        g2d.dispose();
+       
+        super.paintComponent(g);
+    
+    }
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -52,11 +47,11 @@ public class PanelAdd extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 940, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 240, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

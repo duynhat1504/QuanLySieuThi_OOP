@@ -2,38 +2,27 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd;
+package GUI.SaleGroup.LoginGui.Background;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author ACER
  */
-public class VoucherAddBackground extends javax.swing.JPanel {
-
-    public VoucherAddBackground() {
+public class IconMart extends javax.swing.JPanel {
+    static Image image;
+    public IconMart() {
         initComponents();
     }
- protected void paintComponent(Graphics g){
+     protected void paintComponent(Graphics g){ 
         Graphics2D g2d = (Graphics2D) g.create();
-        Color xanh = getBackground();
-        g2d.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
-        g2d.setColor(xanh);
-        g2d.fillRoundRect(0, 0, getWidth(), getHeight()/4, 0, 0);
-        g2d.setColor(Color.WHITE);
-        g2d.fillRoundRect(0, getHeight()/4, getWidth(), getHeight()-getHeight()/4, 0, 0);
-
-        g2d.dispose();
-        super.paintComponent(g);
-        
-   
-        setOpaque(false);
-    
+        image = new ImageIcon( ".\\src\\main\\java\\GUI\\SaleGroup\\LoginGui\\Image\\miniMart_resize.png").getImage();
+        g2d.drawImage(image, 0, 0,  this);     
     }
-    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 

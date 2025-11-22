@@ -2,57 +2,45 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package GUI.ManageGroup.ComponentPanel;
+package GUI.SaleGroup.SellerGUI.Component;
 
-import GUI.SaleGroup.LoginGui.Background.*;
-import static GUI.SaleGroup.SellerGUI.Component.ImagePanel.imgDirectory;
-import static GUI.SaleGroup.SellerGUI.Component.ImagePanel.imgExtension;
-import java.awt.AlphaComposite;
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.Image;
 import java.awt.image.BufferedImage;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import org.imgscalr.Scalr;
 
-
+/**
+ *
+ * @author huykh
+ */
 public class ImagePanel extends JPanel{
     private ImageIcon image;
-    private String path;
+    private BufferedImage bufferedImage;
     public final static String imgDirectory = "src/main/java/Assets/Image/";
     public final static String noImageProduct = "no-product";
     public final static String imgExtension = ".png";
-
-
-    public Icon getImage() {
-        return image;
+    
+    public ImagePanel (String url){
+        setImagePath(url);
+    }
+    
+    public ImagePanel(){
+        image = new ImageIcon();
     }
 
     public void setImage(ImageIcon image) {
         this.image = image;
-        this.repaint();
     }
-     public final void setImagePathSanPham(String url){
-        this.image = new ImageIcon(url);
-        this.revalidate();
-        this.repaint();
+    
+    public Icon getImage() {
+        return image;
     }
-        public final void setImagePath(String url){
+    
+    public final void setImagePath(String url){
         this.image = new ImageIcon(imgDirectory+url+imgExtension);
-        this.revalidate();
-        this.repaint();
-    }
-
-    public String getPath() {
-        return path;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
-        this.image = new ImageIcon("src/main/java/Assets/Image/" + path + ".png");
         this.revalidate();
         this.repaint();
     }
@@ -60,21 +48,22 @@ public class ImagePanel extends JPanel{
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
-        if (this.image != null){
-            if (this.image.getIconWidth() < 0 || this.image.getIconHeight() < 0) {
-                this.setImagePath(noImageProduct);
-                return;
-            }
+        if (this.image != null && this.image.getIconWidth() > 0 && this.image.getIconHeight()> 0){
             Graphics2D g2d = (Graphics2D) g.create();
             g2d.setRenderingHint(java.awt.RenderingHints.KEY_INTERPOLATION, java.awt.RenderingHints.VALUE_INTERPOLATION_BICUBIC);
-            BufferedImage imageBuffer = getImgBuffer(this.image);
-            BufferedImage buff = Scalr.resize(imageBuffer, getWidth());
-            g2d.drawImage(buff,0,0,null);
+            if (this.bufferedImage == null){
+                BufferedImage imageBuffer = getImgBuffer(this.image);
+                this.bufferedImage = Scalr.resize(imageBuffer, getWidth());
+            }
+            g2d.drawImage(this.bufferedImage,0,0,null);
             g2d.dispose();
         }
     }
     
     private BufferedImage getImgBuffer(ImageIcon icon){
+        //Change image if it not found
+        if (icon.getIconWidth() == -1 || icon.getIconHeight() == -1)
+            icon = new ImageIcon(imgDirectory + noImageProduct + imgExtension);
         BufferedImage bi = new BufferedImage(
                 icon.getIconWidth(),
                 icon.getIconHeight(),

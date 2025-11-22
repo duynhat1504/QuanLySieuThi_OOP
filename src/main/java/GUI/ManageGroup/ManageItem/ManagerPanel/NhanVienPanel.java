@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package GUI.ManageGroup.ManageItem.ManagerPanel;
-
 import BUS.BusAccessor.ChucVuBUS;
 import BUS.BusAccessor.NhanVienBUS;
 import DTO.ChucVu;
@@ -20,17 +19,16 @@ import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
-
 /**
  *
  * @author ACER
  */
 public class NhanVienPanel extends javax.swing.JPanel {
-    private final NhanVienBUS nhanvienBUS = new NhanVienBUS();
-    private final ChucVuBUS chucvuBUS = new ChucVuBUS();
-
-    DefaultTableModel tableModel;
-
+        private final NhanVienBUS nhanvienBUS = new NhanVienBUS(); 
+        private final ChucVuBUS chucvuBUS = new ChucVuBUS();
+        
+        
+        DefaultTableModel tableModel;
     /**
      * Creates new form NhanVienPanel
      */
@@ -39,39 +37,42 @@ public class NhanVienPanel extends javax.swing.JPanel {
         tableModel = (DefaultTableModel) jTable1.getModel();
         LoadTable();
     }
+private void LoadTable(){
+          List<NhanVien> nhanvienList = nhanvienBUS.getAll() ;
+          
+            tableModel.setRowCount(0);
+           if (nhanvienList == null || nhanvienList.isEmpty()) return;
 
-    private void LoadTable() {
-        List<NhanVien> nhanvienList = nhanvienBUS.getAll();
+     
+    // Debug logging removed: avoid printing list size during UI init
+        // System.out.println("Ket noi thanh cong");
 
-        tableModel.setRowCount(0);
-        if (nhanvienList == null || nhanvienList.isEmpty())
-            return;
 
-        System.out.println(nhanvienList.size());
         for (int i = 0; i < nhanvienList.size(); i++) {
             ChucVu chucVu = chucvuBUS.get(nhanvienList.get(i).getMaChucVu());
 
-            // Object[] obj = {nhanvienList.get(i).getMaNV(),
-            // nhanvienList.get(i).getTenNV(), chucVu.getTenChucVu(),
-            // nhanvienList.get(i).getSoDienThoai(),
-            // nhanvienBUS.getSoLuongHoaDon(nhanvienList.get(i).getMaNV()),
-            // nhanvienBUS.getDoanhThu(nhanvienList.get(i).getMaNV())};
-            //
-            // tableModel.addRow(obj);
-            if(nhanvienList.get(i).getTenNV()==null) continue;
-            tableModel.addRow(new Object[] { nhanvienList.get(i).getMaNV(), nhanvienList.get(i).getTenNV(),
-                    chucVu.getTenChucVu(), nhanvienList.get(i).getSoDienThoai(),
-                    nhanvienBUS.getSoLuongHoaDon(nhanvienList.get(i).getMaNV()),
-                    nhanvienBUS.getDoanhThu(nhanvienList.get(i).getMaNV()) });
+            // Kiểm tra null
+            String tenChucVu = (chucVu != null) ? chucVu.getTenChucVu() : "Chưa có chức vụ";
 
+            // Thêm vào bảng
+            tableModel.addRow(new Object[]{
+                nhanvienList.get(i).getMaNV(),
+                nhanvienList.get(i).getTenNV(),
+                tenChucVu,
+                nhanvienList.get(i).getSoDienThoai(),
+                nhanvienBUS.getSoLuongHoaDon(nhanvienList.get(i).getMaNV()),
+                nhanvienBUS.getDoanhThu(nhanvienList.get(i).getMaNV())
+            });
         }
-        final TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(tableModel);
-        jTable1.setRowSorter(sorter);
+       
 
-    }
+       final TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(tableModel);
+       jTable1.setRowSorter(sorter);
+   
+   }
 
-    // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPopupMenu1 = new javax.swing.JPopupMenu();
@@ -167,11 +168,13 @@ public class NhanVienPanel extends javax.swing.JPanel {
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
-                jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 10, Short.MAX_VALUE));
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
         jPanel19Layout.setVerticalGroup(
-                jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 30, Short.MAX_VALUE));
+            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
 
         add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 10, 30));
 
@@ -252,11 +255,13 @@ public class NhanVienPanel extends javax.swing.JPanel {
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
-                jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 0, Short.MAX_VALUE));
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
         jPanel22Layout.setVerticalGroup(
-                jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 0, Short.MAX_VALUE));
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         shape13.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 156, 122, -1));
 
@@ -280,11 +285,13 @@ public class NhanVienPanel extends javax.swing.JPanel {
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
-                jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 0, Short.MAX_VALUE));
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
         jPanel23Layout.setVerticalGroup(
-                jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGap(0, 0, Short.MAX_VALUE));
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         shape13.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 220, 3));
 
@@ -298,17 +305,18 @@ public class NhanVienPanel extends javax.swing.JPanel {
         javax.swing.GroupLayout shape3Layout = new javax.swing.GroupLayout(shape3);
         shape3.setLayout(shape3Layout);
         shape3Layout.setHorizontalGroup(
-                shape3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, shape3Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 220,
-                                        javax.swing.GroupLayout.PREFERRED_SIZE)));
+            shape3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, shape3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
         shape3Layout.setVerticalGroup(
-                shape3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(shape3Layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addComponent(jLabel91)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+            shape3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(shape3Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addComponent(jLabel91)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         shape13.add(shape3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 220, 200));
         shape13.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, 110, 20));
@@ -323,33 +331,32 @@ public class NhanVienPanel extends javax.swing.JPanel {
 
         jTable1.setBackground(new java.awt.Color(119, 176, 210));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-                new Object[][] {
+            new Object [][] {
 
-                },
-                new String[] {
-                        "Mã nhân viên", "Tên nhân viên", "Chức vụ", "SĐT", "Số đơn đã bán", "Tổng tiền thu"
-                }) {
-            Class[] types = new Class[] {
-                    java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class,
-                    java.lang.Integer.class, java.lang.Long.class
+            },
+            new String [] {
+                "Mã nhân viên", "Tên nhân viên", "Chức vụ", "SĐT", "Số đơn đã bán", "Tổng tiền thu"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Long.class
             };
-            boolean[] canEdit = new boolean[] {
-                    true, true, true, true, false, false
+            boolean[] canEdit = new boolean [] {
+                true, true, true, true, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
-                return types[columnIndex];
+                return types [columnIndex];
             }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit[columnIndex];
+                return canEdit [columnIndex];
             }
         });
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTable1MouseClicked(evt);
             }
-
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 jTable1MouseReleased(evt);
             }
@@ -358,8 +365,7 @@ public class NhanVienPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 960, 270));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(
-                new String[] { "Mã nhân viên", "Tên nhân viên", "Chức vụ", "Số điện thoại" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mã nhân viên", "Tên nhân viên", "Chức vụ", "Số điện thoại" }));
         add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, 120, 30));
 
         button14.setBackground(new java.awt.Color(118, 199, 150));
@@ -375,11 +381,11 @@ public class NhanVienPanel extends javax.swing.JPanel {
         add(button14, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 150, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jTextField7ActionPerformed
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
-    }// GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_jTextField7ActionPerformed
 
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTable1MouseClicked
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
 
         int row = jTable1.getSelectedRow();
         int maNhanVien = (int) jTable1.getValueAt(row, 0);
@@ -387,16 +393,16 @@ public class NhanVienPanel extends javax.swing.JPanel {
         jLabel91.setText(nhanvien.getTenNV());
         ChucVu chucVu = chucvuBUS.get(nhanvien.getMaChucVu());
         jLabel100.setText(chucVu.getTenChucVu());
-        jLabel1.setText(nhanvien.isGioiTinh() == false ? "Nam" : "Nữ");
+        jLabel1.setText(nhanvien.isGioiTinh() == false ? "Nam":"Nữ");
         jLabel2.setText(nhanvien.getCmnd());
         jLabel3.setText(nhanvien.getNgaySinh().toString());
         jLabel4.setText(nhanvien.getDiaChi());
         jLabel5.setText(nhanvien.getNgayThamGia().toString());
         jLabel6.setText(nhanvien.getEmail());
         jLabel7.setText(maNhanVien + "");
-    }// GEN-LAST:event_jTable1MouseClicked
+    }//GEN-LAST:event_jTable1MouseClicked
 
-    private void button12ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_button12ActionPerformed
+    private void button12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button12ActionPerformed
         final TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(tableModel);
         jTable1.setRowSorter(sorter);
         int select = jComboBox1.getSelectedIndex();
@@ -410,53 +416,55 @@ public class NhanVienPanel extends javax.swing.JPanel {
                 System.out.println("Bad regex pattern");
             }
         }
-    }// GEN-LAST:event_button12ActionPerformed
+    }//GEN-LAST:event_button12ActionPerformed
 
-    private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_jTextField7KeyReleased
+    private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
         if (jTextField7.getText().equals("")) {
             LoadTable();
         }
-    }// GEN-LAST:event_jTextField7KeyReleased
+    }//GEN-LAST:event_jTextField7KeyReleased
 
-    private void jTable1MouseReleased(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jTable1MouseReleased
-        if (evt.getButton() == MouseEvent.BUTTON3) {
-            if (evt.isPopupTrigger() && jTable1.getSelectedRowCount() != 0) {
+    private void jTable1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseReleased
+        if(evt.getButton() == MouseEvent.BUTTON3){
+            if(evt.isPopupTrigger() && jTable1.getSelectedRowCount() != 0){
                 jPopupMenu1.show(evt.getComponent(), evt.getX(), evt.getY());
             }
         }
-    }// GEN-LAST:event_jTable1MouseReleased
+    }//GEN-LAST:event_jTable1MouseReleased
 
-    private void clearActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_clearActionPerformed
-        int row = jTable1.getSelectedRow();
-        int maNhanVien = (int) jTable1.getValueAt(row, 0);
-        nhanvienBUS.remove(maNhanVien);
-        tableModel.removeRow(row);
-    }// GEN-LAST:event_clearActionPerformed
+    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
+            int row = jTable1.getSelectedRow();
+            int maNhanVien = (int) jTable1.getValueAt(row, 0);
+            nhanvienBUS.remove(maNhanVien);
+            tableModel.removeRow(row);
+    }//GEN-LAST:event_clearActionPerformed
 
-    private void button11MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_button11MouseClicked
+    private void button11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button11MouseClicked
 
         LoadTable();
 
-    }// GEN-LAST:event_button11MouseClicked
+    }//GEN-LAST:event_button11MouseClicked
 
-    private void button14MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_button14MouseClicked
+    private void button14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button14MouseClicked
         NhanVienAdd nhanvienAdd = new NhanVienAdd(true, 0);
         nhanvienAdd.setVisible(true);
         nhanvienAdd.setLocationRelativeTo(this);
-    }// GEN-LAST:event_button14MouseClicked
+    }//GEN-LAST:event_button14MouseClicked
 
-    private void button11ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_button11ActionPerformed
+    private void button11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button11ActionPerformed
+        
+    }//GEN-LAST:event_button11ActionPerformed
 
-    }// GEN-LAST:event_button11ActionPerformed
-
-    private void editActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_editActionPerformed
+    private void editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editActionPerformed
         int row = jTable1.getSelectedRow();
         int maNhanVien = (int) jTable1.getValueAt(row, 0);
         NhanVienAdd nhanvienAdd = new NhanVienAdd(false, maNhanVien);
         nhanvienAdd.setVisible(true);
         nhanvienAdd.setLocationRelativeTo(this);
 
-    }// GEN-LAST:event_editActionPerformed
+        
+    }//GEN-LAST:event_editActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.SaleGroup.LoginGui.Component.Button button10;

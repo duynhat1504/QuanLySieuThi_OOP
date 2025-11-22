@@ -56,6 +56,7 @@ public class SanPhamPanel extends javax.swing.JPanel {
         jComboBox1.addItem(GetLoai(iSP.get(i).getMaLoai()));
         }
         jComboBox1.setSelectedItem("Tất cả");
+        // System.out.println("Load combobox thành công");
     }
     // Search Text Field
     public void FilterTF (String a){
@@ -187,6 +188,7 @@ public class SanPhamPanel extends javax.swing.JPanel {
 
         jLabel81.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel81.setForeground(new java.awt.Color(42, 148, 208));
+        // jLabel81.setForeground(new java.awt.Color(255, 255, 255));
         jLabel81.setText("QUẢN LÝ SẢN PHẨM");
         add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
 
@@ -238,6 +240,7 @@ public class SanPhamPanel extends javax.swing.JPanel {
 
         jLabel48.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(42, 148, 208));
+        // jLabel48.setForeground(new java.awt.Color(255, 255, 255));
         jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/ManageGroup/ManagerIcon/list-icon.png"))); // NOI18N
         jLabel48.setText("Danh sách sản phẩm");
