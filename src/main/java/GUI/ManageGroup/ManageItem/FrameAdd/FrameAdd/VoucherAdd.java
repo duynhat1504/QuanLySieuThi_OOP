@@ -1,23 +1,16 @@
-
 package GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd;
 
 import BUS.BusAccessor.VoucherBUS;
 import GUI.ManageGroup.Handle.VoucherHandle.VoucherHandleBUS;
 import GUI.ManageGroup.Handle.VoucherHandle.VoucherValidate;
-import DTO.Voucher;
+import DataTransfer.Voucher;
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author ACER, TUANMINH
- */
 public class VoucherAdd extends javax.swing.JFrame {
     private String maVoucher;
     private boolean isInsert;
-    /**
-     * Creates new form VoucherAdd
-     */
+ 
     public VoucherAdd() {
         initComponents();
     }
@@ -32,7 +25,6 @@ public class VoucherAdd extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         voucherAddBackground1 = new GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd.VoucherAddBackground();
@@ -318,9 +310,9 @@ public class VoucherAdd extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void shape1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_shape1MouseClicked
+    private void shape1MouseClicked(java.awt.event.MouseEvent evt) {
              
         VoucherValidate voucherValidate = new VoucherValidate();
         
@@ -352,24 +344,19 @@ public class VoucherAdd extends javax.swing.JFrame {
         }
         
         
-    }//GEN-LAST:event_shape1MouseClicked
+    }
 
     private void txtNgayBDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNgayBDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNgayBDActionPerformed
+    }
 
     private void shape2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_shape2MouseClicked
         // TODO add your handling code here:
         this.dispose();
-    }//GEN-LAST:event_shape2MouseClicked
+    }
 
 
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -386,9 +373,7 @@ public class VoucherAdd extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(VoucherAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new VoucherAdd().setVisible(true);
@@ -397,7 +382,6 @@ public class VoucherAdd extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.ManageGroup.ComponentPanel.ImagePanel imagePanel1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -423,7 +407,6 @@ public class VoucherAdd extends javax.swing.JFrame {
     private javax.swing.JTextField txtSoLuotSD;
     private javax.swing.JTextArea txtaMoTa;
     private GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd.VoucherAddBackground voucherAddBackground1;
-    // End of variables declaration//GEN-END:variables
     private final VoucherBUS voucherBus = new VoucherBUS();
     private Voucher voucher;
     private final SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
