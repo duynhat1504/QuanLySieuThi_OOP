@@ -1,17 +1,19 @@
 package BUS.AccountServices;
 
+import java.sql.Timestamp;
+
 import DataAccess.DataAccessObject.LoginDetailDAO;
+import DataAccess.DataAccessObject.NhanVienDAO;
 import DataAccess.DataAccessObject.TaiKhoanDAO;
 import DataTransfer.LoaiSanPham;
 import DataTransfer.NhaCungCap;
 import GUI.ManageGroup.ManageItem.ManagerFrame.ManageFrame;
 import GUI.ManageGroup.ManageItem.ManagerPanel.NhapXuatPanel;
 
-import java.sql.Timestamp;
-
 public class LoginAction {
     private final TaiKhoanDAO taiKhoanDAO;
     private final LoginDetailDAO loginDetailDAO;
+    private NhanVienDAO nhanVienDAO;
     public ManageFrame manager;
     private LoaiSanPham.LoginDetail loginDetail;
     private final int AUTH_KEY_EXPIRE_TIME = 1000*60*60*2;
@@ -20,11 +22,13 @@ public class LoginAction {
     public LoginAction(){
         taiKhoanDAO = new TaiKhoanDAO();
         loginDetailDAO = new LoginDetailDAO();
+        nhanVienDAO = new NhanVienDAO();
     }
     public LoginAction(ManageFrame manager){
         this.manager = manager;
         taiKhoanDAO = new TaiKhoanDAO();
         loginDetailDAO = new LoginDetailDAO();
+        nhanVienDAO = new NhanVienDAO();
     }
     public boolean loginInput(String username, String password, boolean rememberLogin){
         this.rememberLogin = rememberLogin;
