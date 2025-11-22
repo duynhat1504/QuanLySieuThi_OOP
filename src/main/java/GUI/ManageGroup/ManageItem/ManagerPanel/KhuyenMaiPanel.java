@@ -24,6 +24,7 @@ import BUS.BusAccessor.VoucherBUS;
 import DataTransfer.GiamGiaSP;
 import DataTransfer.SanPham;
 import DataTransfer.Voucher;
+import GUI.LoginGUI.Component.Button;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.GiamGiaSanPhamAdd;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.VoucherAdd;
 /**
@@ -104,7 +105,7 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 16)); 
         jLabel45.setForeground(new java.awt.Color(128, 0, 0));
         jLabel45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/ManageGroup/ManagerIcon/info.png"))); // NOI18N
+        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/ManageGroup/ManagerIcon/info.png"))); 
         jLabel45.setText("Thông tin chi tiết");
         add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 520, 30));
 
@@ -114,7 +115,7 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         jLabel46.setText("Danh sách voucher");
         add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 210, 40));
 
-        txtSearchVoucher.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtSearchVoucher.setFont(new java.awt.Font("Segoe UI", 0, 14));
         txtSearchVoucher.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtSearchVoucher.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -271,7 +272,6 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
-        // Sửa vị trí thanh ngang cân bằng với tên sản phẩm 
         shape9.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 70, -1, -1));
 
         add(shape9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 520, 240));
@@ -340,7 +340,6 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 510, 370, 210));
 
-        // Bảng danh sách voucher
         tbVoucher.setBackground(new java.awt.Color(128, 0, 0));
         tbVoucher.setForeground(new java.awt.Color(255, 255, 255));
         tbVoucher.setModel(new javax.swing.table.DefaultTableModel(
@@ -366,7 +365,7 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         button5.setBackground(new java.awt.Color(128, 0, 0));
         button5.setForeground(new java.awt.Color(255, 255, 255));
         button5.setText("Refresh");
-        button5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        button5.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
         button5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         button5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -458,8 +457,6 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
             .addGap(0, 3, Short.MAX_VALUE)
         );
 
-        // Sửa vị trí thanh ngang dưới chữ MÃ VOUCHER để gần hơn: giảm 100 xuống 90
-        // shape10.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, -1, -1));
         shape10.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
 
         txtMota.setEditable(false);
@@ -471,43 +468,42 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
 
         shape10.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 180, -1));
 
-        jLabel59.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel59.setFont(new java.awt.Font("Segoe UI", 1, 14)); 
         jLabel59.setForeground(new java.awt.Color(255, 255, 255));
         jLabel59.setText("Số lượt sử dụng:");
         shape10.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 120, -1));
 
-        lbNgayBD.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbNgayBD.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
         lbNgayBD.setForeground(new java.awt.Color(17, 86, 125));
         shape10.add(lbNgayBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 100, 20));
 
-        lbGiaTriToiThieu.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbGiaTriToiThieu.setFont(new java.awt.Font("Segoe UI", 1, 12));
         lbGiaTriToiThieu.setForeground(new java.awt.Color(17, 86, 125));
         shape10.add(lbGiaTriToiThieu, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, 100, 20));
 
-        lbPtGiam.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbPtGiam.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
         lbPtGiam.setForeground(new java.awt.Color(17, 86, 125));
         shape10.add(lbPtGiam, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, 100, 20));
 
-        lbLuotSD.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbLuotSD.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
         lbLuotSD.setForeground(new java.awt.Color(17, 86, 125));
         shape10.add(lbLuotSD, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 100, 20));
 
-        lbNgayKT.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbNgayKT.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
         lbNgayKT.setForeground(new java.awt.Color(17, 86, 125));
         shape10.add(lbNgayKT, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 100, 20));
 
-        lbKMToiDa.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lbKMToiDa.setFont(new java.awt.Font("Segoe UI", 1, 12));
         lbKMToiDa.setForeground(new java.awt.Color(17, 86, 125));
         shape10.add(lbKMToiDa, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 100, 20));
 
         add(shape10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 520, 240));
         add(filler1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 0, 50, 750));
 
-        // button6.setBackground(new java.awt.Color(0, 150, 200));
         button6.setBackground(new java.awt.Color(128, 0, 0));
         button6.setForeground(new java.awt.Color(255, 255, 255));
         button6.setText("THÊM VOUCHER");
-        button6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        button6.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
         button6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         button6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -516,11 +512,10 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         });
         add(button6, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 50, 160, 30));
 
-        // button7.setBackground(new java.awt.Color(0, 150, 200));
         button7.setBackground(new java.awt.Color(128, 0, 0));
         button7.setForeground(new java.awt.Color(255, 255, 255));
         button7.setText("Refresh");
-        button7.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        button7.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
         button7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         button7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -528,31 +523,30 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
             }
         });
         add(button7, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 50, 90, 30));
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
-    private void txtSearchVoucherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchVoucherActionPerformed
+    private void txtSearchVoucherActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
         button3.doClick();
-    }//GEN-LAST:event_txtSearchVoucherActionPerformed
+    }
 
     private void txtSearchProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchProductActionPerformed
         // TODO add your handling code here:
         button9.doClick();
-    }//GEN-LAST:event_txtSearchProductActionPerformed
+    }
 
-    private void button3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button3ActionPerformed
+    private void button3ActionPerformed(java.awt.event.ActionEvent evt) {
         String text = this.txtSearchVoucher.getText().trim();
         if (text.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Vui lòng nhập thông tin vào ô tìm kiếm", "Nhắc nhở", JOptionPane.WARNING_MESSAGE);
             return;
         }
         try {
-            // Escape user input and use case-insensitive matching
             this.sorterVoucher.setRowFilter(RowFilter.regexFilter("(?i)" + Pattern.quote(text)));
         } catch (PatternSyntaxException ex) {
             JOptionPane.showMessageDialog(this, "Từ khóa tìm kiếm không hợp lệ", "Lỗi", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_button3ActionPerformed
+    }
 
     private void tbProductMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbProductMouseClicked
         // TODO add your handling code here:
@@ -560,15 +554,14 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         this.sp = sanPhamBus.get(Integer.valueOf(tbProduct.getValueAt(row, 1) + ""));
         this.giamGiaSP = giamGiaSPBus.get(Integer.valueOf(tbProduct.getValueAt(row, 0) + ""));
         this.pushDataToGuiDiscountProduct(sp, giamGiaSP);
-    }//GEN-LAST:event_tbProductMouseClicked
+    }
 
     private void tbVoucherMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbVoucherMouseClicked
         // TODO add your handling code here:
         int row = tbVoucher.getSelectedRow();
         this.voucher = voucherBus.get(tbVoucher.getValueAt(row, 1) + "");
-        // Gọi phương thức để đẩy dữ liệu voucher lên giao diện
         this.pushDataToGuiVoucher(voucher);
-    }//GEN-LAST:event_tbVoucherMouseClicked
+    }
 
     private void button9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button9ActionPerformed
         // TODO add your handling code here:
@@ -582,7 +575,7 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         } catch (PatternSyntaxException ex) {
             JOptionPane.showMessageDialog(this, "Từ khóa tìm kiếm không hợp lệ", "Lỗi", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_button9ActionPerformed
+    }
 
     private void button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5ActionPerformed
         // TODO add your handling code here:
@@ -592,21 +585,20 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
     private void button7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button7ActionPerformed
         // TODO add your handling code here:
         this.loadDataTableVoucher();
-    }//GEN-LAST:event_button7ActionPerformed
+    }
 
     private void button6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button6ActionPerformed
         // TODO add your handling code here:
         new VoucherAdd("<html>THÊM VOUCHER","" , true).setVisible(true);
-        
-    }//GEN-LAST:event_button6ActionPerformed
+    }
 
     private void button2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button2ActionPerformed
         // TODO add your handling code here:
         new GiamGiaSanPhamAdd("<html>THÊM GIẢM GIÁ SẢN PHẨM", 0, true).setVisible(true);
-    }//GEN-LAST:event_button2ActionPerformed
+    }
 
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+
     private GUI.LoginGUI.Component.Button button2;
     private GUI.LoginGUI.Component.Button button3;
     private GUI.LoginGUI.Component.Button button5;
@@ -697,7 +689,6 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
     }
     
     public void init(){
-        //popUp menu cho table giảm giá sản phẩm
         JPopupMenu popUp1 = new JPopupMenu();
         JMenuItem item11 = new JMenuItem("Xem/Sửa khuyến mãi sản phẩm");
         item11.addActionListener(new ActionListener(){
@@ -737,7 +728,6 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         popUp1.add(item12);
         tbProduct.setComponentPopupMenu(popUp1);
         
-        //popUp menu cho table voucher
         JPopupMenu popUp2 = new JPopupMenu();
         JMenuItem item21 = new JMenuItem("Xem/Sửa thông tin Voucher");
         JMenuItem item22 = new JMenuItem("Xóa");
