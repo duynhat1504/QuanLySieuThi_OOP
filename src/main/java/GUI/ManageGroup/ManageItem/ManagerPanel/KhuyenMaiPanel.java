@@ -47,8 +47,8 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         txtSearchVoucher = new javax.swing.JTextField();
         jLabel80 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        button2 = new GUI.SaleGroup.LoginGui.Component.Button();
-        button3 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button2 = new GUI.LoginGUI.Component.Button();
+        button3 = new GUI.LoginGUI.Component.Button();
         shape9 = new GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd.Shape();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
@@ -67,12 +67,12 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         jPanel17 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         txtSearchProduct = new javax.swing.JTextField();
-        button9 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button9 = new GUI.LoginGUI.Component.Button();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbProduct = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         tbVoucher = new javax.swing.JTable();
-        button5 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button5 = new GUI.LoginGUI.Component.Button();
         jLabel47 = new javax.swing.JLabel();
         shape10 = new GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd.Shape();
         lbMaVoucher = new javax.swing.JLabel();
@@ -95,8 +95,8 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         lbNgayKT = new javax.swing.JLabel();
         lbKMToiDa = new javax.swing.JLabel();
         filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
-        button6 = new GUI.SaleGroup.LoginGui.Component.Button();
-        button7 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button6 = new GUI.LoginGUI.Component.Button();
+        button7 = new GUI.LoginGUI.Component.Button();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -607,12 +607,12 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private GUI.SaleGroup.LoginGui.Component.Button button2;
-    private GUI.SaleGroup.LoginGui.Component.Button button3;
-    private GUI.SaleGroup.LoginGui.Component.Button button5;
-    private GUI.SaleGroup.LoginGui.Component.Button button6;
-    private GUI.SaleGroup.LoginGui.Component.Button button7;
-    private GUI.SaleGroup.LoginGui.Component.Button button9;
+    private GUI.LoginGUI.Component.Button button2;
+    private GUI.LoginGUI.Component.Button button3;
+    private GUI.LoginGUI.Component.Button button5;
+    private GUI.LoginGUI.Component.Button button6;
+    private GUI.LoginGUI.Component.Button button7;
+    private GUI.LoginGUI.Component.Button button9;
     private javax.swing.Box.Filler filler1;
     private GUI.ManageGroup.ComponentPanel.ImagePanel imagePanel2;
     private javax.swing.JLabel jLabel10;

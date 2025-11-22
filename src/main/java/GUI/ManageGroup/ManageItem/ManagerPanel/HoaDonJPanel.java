@@ -9,12 +9,12 @@ import BUS.BusAccessor.KhachHangBUS;
 import BUS.BusAccessor.NhanVienBUS;
 import BUS.BusAccessor.SanPhamBUS;
 import BUS.SaleServices.Money;
-import DAL.DataAcessObject.ChiTietHoaDonDAO;
-import DTO.ChiTietHoaDon;
-import DTO.HoaDon;
-import DTO.KhachHang;
-import DTO.NhanVien;
-import DTO.SanPham;
+import DataAccess.DataAccessObject.ChiTietHoaDonDAO;
+import DataTransfer.ChiTietHoaDon;
+import DataTransfer.HoaDon;
+import DataTransfer.KhachHang;
+import DataTransfer.NhanVien;
+import DataTransfer.SanPham;
 import GUI.ManageGroup.Theme.NhapXuatTheme;
 import com.raven.datechooser.DateChooser;
 import java.awt.Color;
@@ -123,7 +123,7 @@ public class HoaDonJPanel extends javax.swing.JPanel {
         jTextField9 = new javax.swing.JTextField();
         jLabel109 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
-        button18 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button18 = new GUI.LoginGUI.Component.Button();
         shape40 = new GUI.ManageGroup.BackgroundShape.Shape();
         jLabel3 = new javax.swing.JLabel();
         shape42 = new GUI.ManageGroup.BackgroundShape.Shape();
@@ -148,7 +148,7 @@ public class HoaDonJPanel extends javax.swing.JPanel {
         jTextField6 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        button19 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button19 = new GUI.LoginGUI.Component.Button();
         jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
@@ -512,8 +512,8 @@ public class HoaDonJPanel extends javax.swing.JPanel {
         
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private GUI.SaleGroup.LoginGui.Component.Button button18;
-    private GUI.SaleGroup.LoginGui.Component.Button button19;
+    private GUI.LoginGUI.Component.Button button18;
+    private GUI.LoginGUI.Component.Button button19;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel104;

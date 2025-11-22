@@ -5,8 +5,8 @@
 package GUI.SaleGroup.SellerGUI.Component;
 
 import BUS.BusAccessor.SanPhamBUS;
-import DTO.ChiTietHoaDon;
-import DTO.SanPham;
+import DataTransfer.ChiTietHoaDon;
+import DataTransfer.SanPham;
 import GUI.SaleGroup.SellerGUI.BasicHandle.ChangePaymentInfo;
 import GUI.SaleGroup.SellerGUI.BasicHandle.RemoveOrderItemAction;
 import GUI.SaleGroup.SellerGUI.BasicHandle.SpinQuantityAction;

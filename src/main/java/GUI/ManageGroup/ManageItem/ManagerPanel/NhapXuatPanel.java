@@ -7,17 +7,16 @@ package GUI.ManageGroup.ManageItem.ManagerPanel;
 import BUS.BusAccessor.NhanVienBUS;
 import BUS.BusAccessor.PhieuHuyBUS;
 import BUS.BusAccessor.PhieuNhapBUS;
-import DTO.PhieuHuy;
-import DTO.PhieuNhap;
+import DataTransfer.PhieuHuy;
+import DataTransfer.PhieuNhap;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.HuyHangSanPham;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.NhapHangSanPham;
-import GUI.ManageGroup.ManageItem.ManageFrame.ManageFrame;
+import GUI.ManageGroup.ManageItem.ManagerFrame.ManageFrame;
 import GUI.ManageGroup.Theme.NhapHuyPanel;
 import com.raven.datechooser.DateChooser;
 import com.raven.datechooser.SelectedDate;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.Timestamp;
 import java.util.List;
 import javax.swing.JMenuItem;
@@ -173,12 +172,12 @@ public class NhapXuatPanel extends javax.swing.JPanel {
         jLabel101 = new javax.swing.JLabel();
         jLabel103 = new javax.swing.JLabel();
         jPanel20 = new javax.swing.JPanel();
-        button15 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button15 = new GUI.LoginGUI.Component.Button();
         jPanel12 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jLabel120 = new javax.swing.JLabel();
         jLabel102 = new javax.swing.JLabel();
-        button17 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button17 = new GUI.LoginGUI.Component.Button();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -589,8 +588,8 @@ public class NhapXuatPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private GUI.SaleGroup.LoginGui.Component.Button button15;
-    private GUI.SaleGroup.LoginGui.Component.Button button17;
+    private GUI.LoginGUI.Component.Button button15;
+    private GUI.LoginGUI.Component.Button button17;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton5;

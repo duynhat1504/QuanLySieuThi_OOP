@@ -5,8 +5,8 @@
 package GUI.ManageGroup.ManageItem.ManagerPanel;
 import BUS.BusAccessor.ChucVuBUS;
 import BUS.BusAccessor.NhanVienBUS;
-import DTO.ChucVu;
-import DTO.NhanVien;
+import DataTransfer.ChucVu;
+import DataTransfer.NhanVien;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.NhanVienAdd;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.SanPhamAdd;
 import java.awt.PopupMenu;
@@ -83,10 +83,10 @@ private void LoadTable(){
         jTextField7 = new javax.swing.JTextField();
         jLabel84 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
-        button10 = new GUI.SaleGroup.LoginGui.Component.Button();
-        button11 = new GUI.SaleGroup.LoginGui.Component.Button();
-        button12 = new GUI.SaleGroup.LoginGui.Component.Button();
-        button13 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button10 = new GUI.LoginGUI.Component.Button();
+        button11 = new GUI.LoginGUI.Component.Button();
+        button12 = new GUI.LoginGUI.Component.Button();
+        button13 = new GUI.LoginGUI.Component.Button();
         shape13 = new GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd.Shape();
         jLabel92 = new javax.swing.JLabel();
         jLabel93 = new javax.swing.JLabel();
@@ -110,7 +110,7 @@ private void LoadTable(){
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jComboBox1 = new javax.swing.JComboBox<>();
-        button14 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button14 = new GUI.LoginGUI.Component.Button();
 
         edit.setText("Edit");
         edit.addActionListener(new java.awt.event.ActionListener() {
@@ -467,11 +467,11 @@ private void LoadTable(){
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private GUI.SaleGroup.LoginGui.Component.Button button10;
-    private GUI.SaleGroup.LoginGui.Component.Button button11;
-    private GUI.SaleGroup.LoginGui.Component.Button button12;
-    private GUI.SaleGroup.LoginGui.Component.Button button13;
-    private GUI.SaleGroup.LoginGui.Component.Button button14;
+    private GUI.LoginGUI.Component.Button button10;
+    private GUI.LoginGUI.Component.Button button11;
+    private GUI.LoginGUI.Component.Button button12;
+    private GUI.LoginGUI.Component.Button button13;
+    private GUI.LoginGUI.Component.Button button14;
     private javax.swing.JMenuItem clear;
     private javax.swing.JMenuItem edit;
     private javax.swing.JComboBox<String> jComboBox1;

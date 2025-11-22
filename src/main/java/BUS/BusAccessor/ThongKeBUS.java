@@ -4,7 +4,7 @@
  */
 package BUS.BusAccessor;
 
-import DTO.*;
+import DataTransfer.*;
 
 import java.util.List;
 

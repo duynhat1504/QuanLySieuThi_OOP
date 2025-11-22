@@ -1,5 +1,5 @@
 
-package GUI.ManageGroup.ManageItem.ManageFrame;
+package GUI.ManageGroup.ManageItem.ManagerFrame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,7 +14,7 @@ import javax.swing.Timer;
 import BUS.AccountServices.LoginAction;
 import BUS.AccountServices.LogoutAction;
 import GUI.ManageGroup.Theme.ManagerTheme;
-import GUI.SaleGroup.LoginGui.LoginFrame.LoginGui;
+import GUI.LoginGUI.LoginFrame.LoginGui;
 
 public class ManageFrame extends javax.swing.JFrame {
      public static int maNV;
@@ -218,7 +218,7 @@ public class ManageFrame extends javax.swing.JFrame {
                 
                 if(logAct == null) System.exit(0);
                 
-                if(!logAct.isRememberMe()){
+                if(!logAct.isRememberLogin()){
                     System.out.println("No remember user!");
                     System.out.println("Login detail: " + logAct.getLoginDetail());
                     LogoutAction.storeLogoutTime(logAct.getLoginDetail());

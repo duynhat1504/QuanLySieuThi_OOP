@@ -6,7 +6,7 @@ package GUI.SaleGroup.SellerGUI.BasicHandle;
 
 import BUS.SaleServices.Money;
 import BUS.SaleServices.PayActionBus;
-import DTO.ChiTietHoaDon;
+import DataTransfer.ChiTietHoaDon;
 import GUI.SaleGroup.SellerGUI.SellerMainFrame;
 import java.util.List;
 import javax.swing.JLabel;

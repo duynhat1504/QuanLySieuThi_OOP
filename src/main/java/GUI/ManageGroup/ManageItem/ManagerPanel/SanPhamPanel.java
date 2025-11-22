@@ -9,7 +9,7 @@ import BUS.BusAccessor.LoaiSanPhamBUS;
 import BUS.BusAccessor.SanPhamBUS;
 import DataTransfer.LoaiSanPham;
 import DataTransfer.SanPham;
-import BUS.Excel.sanphamexcel;
+//import BUS.Excel.sanphamexcel;
 import GUI.ManageGroup.ComponentPanel.ProductDetailPanel;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.SanPhamAdd;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameSua.SanPhamSua;
@@ -147,16 +147,16 @@ public class SanPhamPanel extends javax.swing.JPanel {
         Xóa = new javax.swing.JMenuItem();
         jLabel81 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        button8 = new GUI.SaleGroup.LoginGui.Component.Button();
-        button5 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button8 = new GUI.LoginGUI.Component.Button();
+        button5 = new GUI.LoginGUI.Component.Button();
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
-        button6 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button6 = new GUI.LoginGUI.Component.Button();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         productDetailPanel1 = new GUI.ManageGroup.ComponentPanel.ProductDetailPanel();
         jTextField1 = new javax.swing.JTextField();
-        button2 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button2 = new GUI.LoginGUI.Component.Button();
         jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jRadioButton1 = new javax.swing.JRadioButton();
@@ -341,11 +341,11 @@ public class SanPhamPanel extends javax.swing.JPanel {
 // Click Table
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
 
-        tableModel = (DefaultTableModel) jTable1.getModel();
-        int maSP= Integer.parseInt(jTable1.getValueAt(jTable1.getSelectedRow(),0)+"");
-        sp =  spBUS.get(maSP);
-        System.out.println(sp.toString());
-        productDetailPanel1.setSanpham(sp);
+//        tableModel = (DefaultTableModel) jTable1.getModel();
+//        int maSP= Integer.parseInt(jTable1.getValueAt(jTable1.getSelectedRow(),0)+"");
+//        sp =  spBUS.get(maSP);
+//        System.out.println(sp.toString());
+//        productDetailPanel1.setSanpham(sp);
      
     }//GEN-LAST:event_jTable1MouseClicked
 // Turn on Frame Add
@@ -454,33 +454,33 @@ public class SanPhamPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_XóaActionPerformed
 
     private void button5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button5ActionPerformed
-        sanphamexcel spexcel = new sanphamexcel();
-        String url ="src\\main\\java\\BUS\\Excel\\sp.xlsx";
-        spexcel.sanPhamtuDataBaseraExcel(url);
-        JOptionPane.showMessageDialog(this, "Success");
+//        sanphamexcel spexcel = new sanphamexcel();
+//        String url ="src\\main\\java\\BUS\\Excel\\sp.xlsx";
+//        spexcel.sanPhamtuDataBaseraExcel(url);
+//        JOptionPane.showMessageDialog(this, "Success");
     }//GEN-LAST:event_button5ActionPerformed
 
     private void button8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button8ActionPerformed
-         sanphamexcel  sp = new sanphamexcel();
-        JFileChooser fileChooser = new JFileChooser();
-        FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("File excel", "xlsx");
-        fileChooser.setFileFilter(imageFilter);
-        fileChooser.setMultiSelectionEnabled(false);
-        int x = fileChooser.showDialog(this, "Chon file");
-        if(x == JFileChooser.APPROVE_OPTION){
-        File file = fileChooser.getSelectedFile();
-        sp.sanphamtuexcel(file);
-        }
+//         sanphamexcel  sp = new sanphamexcel();
+//        JFileChooser fileChooser = new JFileChooser();
+//        FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("File excel", "xlsx");
+//        fileChooser.setFileFilter(imageFilter);
+//        fileChooser.setMultiSelectionEnabled(false);
+//        int x = fileChooser.showDialog(this, "Chon file");
+//        if(x == JFileChooser.APPROVE_OPTION){
+//        File file = fileChooser.getSelectedFile();
+//        sp.sanphamtuexcel(file);
+//        }
     }//GEN-LAST:event_button8ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem Sửa;
     private javax.swing.JMenuItem Xóa;
-    private GUI.SaleGroup.LoginGui.Component.Button button2;
-    private GUI.SaleGroup.LoginGui.Component.Button button5;
-    private GUI.SaleGroup.LoginGui.Component.Button button6;
-    private GUI.SaleGroup.LoginGui.Component.Button button8;
+    private GUI.LoginGUI.Component.Button button2;
+    private GUI.LoginGUI.Component.Button button5;
+    private GUI.LoginGUI.Component.Button button6;
+    private GUI.LoginGUI.Component.Button button8;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel47;
