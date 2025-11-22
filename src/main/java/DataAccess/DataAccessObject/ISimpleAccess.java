@@ -2,6 +2,7 @@ package DataAccess.DataAccessObject;
 
 import java.util.List;
 
+<<<<<<< HEAD
 //Interface dùng cho các bản ghi có trong database
 public interface ISimpleAccess<T, Id> {
     //Insert datatype T into database by common SQL command: INSERT INTO
@@ -16,5 +17,12 @@ public interface ISimpleAccess<T, Id> {
     //Get row has id: SELECT * FROM table WHERE id = id
     T select(Id id);
     //Get all rows in the table: SELECT * FROM table
+=======
+public interface ISimpleAccess <T, Id>{
+    boolean insert(T t);
+    boolean update(Id id, T t);
+    boolean delete(Id id);
+    T select(Id id);
+>>>>>>> 2b24ea128486abfa78e44d58ca56ebbf88458980
     List<T> selectAll();
 }
