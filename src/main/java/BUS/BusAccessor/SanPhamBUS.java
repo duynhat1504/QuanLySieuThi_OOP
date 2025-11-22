@@ -1,9 +1,9 @@
 package BUS.BusAccessor;
 
-import DataAccess.DataAccessObject.NhanVienDAO;
+// import DataAccess.DataAccessObject.NhanVienDAO;
 import DataAccess.DataAccessObject.SanPhamDAO;
 import DataTransfer.ChiTietHoaDon;
-import DataTransfer.NhanVien;
+// import DataTransfer.NhanVien;
 import DataTransfer.SanPham;
 import java.util.ArrayList;
 import java.util.List;
