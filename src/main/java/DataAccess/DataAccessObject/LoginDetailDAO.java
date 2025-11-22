@@ -12,9 +12,6 @@ public class LoginDetailDAO  extends  AbstractAccessData<LoginDetail> implements
     public boolean insert(LoginDetail loginDetail) {
         return executeUpdate("INSERT INTO LOGIN_DETAIL(AUTH_KEY, IP_ADDRESS, MAC_ADDRESS,LOGIN_TIME,LOGOUT_TIME,SOTK) VALUES(?,?,?,?,?,?)",
                 loginDetail.getAuthKey(), loginDetail.getIpAddress(), loginDetail.getMacAddress(), loginDetail.getLoginTime(), loginDetail.getLoginTime(), loginDetail.getSoTK());
-
-        //  return executeUpdate("INSERT INTO LOGIN_DETAIL(AUTH_KEY,IP_ADDRESS,MAC_ADDRESS,LOGIN_TIME,LOGOUT_TIME,SOTK) VALUES(?,?,?,?,?,?)",
-        //         loginDetail.getAuthKey(),loginDetail.getIpAddress(),loginDetail.getMacAddress(),loginDetail.getLoginTime(),loginDetail.getLogoutTime(),loginDetail.getSoTK());
     }
 
     @Override
