@@ -15,7 +15,6 @@ public interface ISimpleAccess<T, Id> {
 
     //Get row has id: SELECT * FROM table WHERE id = id
     T select(Id id);
-
     //Get all rows in the table: SELECT * FROM table
     List<T> selectAll();
 }
