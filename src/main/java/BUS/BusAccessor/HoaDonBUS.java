@@ -9,7 +9,7 @@ import DataTransfer.HoaDon;
 import java.util.List;
 
 
-public class HoaDonBUS implements IBussAccess<HoaDon, Integer>{
+public class HoaDonBUS implements IBusAccess<HoaDon, Integer>{
     private final HoaDonDAO HoaDonDAO=new HoaDonDAO();
     @Override
     public HoaDon get(Integer maHoaDon) {
