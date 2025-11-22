@@ -3,11 +3,11 @@ package BUS.BusAccessor;
 import java.util.ArrayList;
 import java.util.List;
 
-import DataAccess.DataAccessObject.VoucherDA;
+import DataAccess.DataAccessObject.VoucherDAO;
 import DataTransfer.Voucher;
 
 public class VoucherBUS implements IBusAccess<Voucher,String>{
-    private final VoucherDA voucherDA = new VoucherDA();
+    private final VoucherDAO voucherDA = new VoucherDAO();
     @Override
     public Voucher get(String maVoucher) {
         return voucherDA.select(maVoucher);

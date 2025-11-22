@@ -3,11 +3,11 @@ package BUS.BusAccessor;
 import java.util.ArrayList;
 import java.util.List;
 
-import DataAccess.DataAccessObject.GiamGiaSPDA;
+import DataAccess.DataAccessObject.GiamGiaSPDAO;
 import DataTransfer.GiamGiaSP;
 
 public class GiamGiaSPBUS implements IBusAccess<GiamGiaSP, Integer>{
-    private final GiamGiaSPDA giamgiaSPDA = new GiamGiaSPDA();
+    private final GiamGiaSPDAO giamgiaSPDA = new GiamGiaSPDAO();
 
     @Override
     public GiamGiaSP get(Integer soPhieu) {
