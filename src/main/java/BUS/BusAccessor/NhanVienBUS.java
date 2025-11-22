@@ -9,10 +9,6 @@ import DataTransfer.HoaDon;
 import DataTransfer.NhanVien;
 import java.util.List;
 
-/**
- *
- * @author tiend
- */
 public class NhanVienBUS implements IBusAccess<NhanVien, Integer> {
     private final NhanVienDAO nhanVienDAO = new NhanVienDAO();
 
