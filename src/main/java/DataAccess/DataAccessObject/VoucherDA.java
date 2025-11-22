@@ -4,7 +4,7 @@ import DataTransfer.Voucher;
 
 import java.util.List;
 
-public class VoucherDA extends AbtractAccessDatabase<Voucher> implements ISimpleAccess<Voucher,String> {
+public class VoucherDA extends AbstractAccessData<Voucher> implements ISimpleAccess<Voucher,String> {
     {
         setClazz(Voucher.class);
     }

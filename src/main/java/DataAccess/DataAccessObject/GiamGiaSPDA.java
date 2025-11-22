@@ -5,7 +5,7 @@ import java.util.List;
 import DataTransfer.GiamGiaSP;
 
 
-public class GiamGiaSPDA extends AbtractAccessDatabase<GiamGiaSP> implements ISimpleAccess<GiamGiaSP, Integer>{
+public class GiamGiaSPDA extends AbstractAccessData<GiamGiaSP> implements ISimpleAccess<GiamGiaSP, Integer>{
     
     {
         setClazz(GiamGiaSP.class);
