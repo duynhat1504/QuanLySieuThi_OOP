@@ -144,7 +144,7 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Component class="GUI.SaleGroup.LoginGui.Component.Button" name="button10">
+    <Component class="GUI.LoginGUI.Component.Button" name="button10">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="96" green="c7" red="76" type="rgb"/>
@@ -164,7 +164,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="GUI.SaleGroup.LoginGui.Component.Button" name="button11">
+    <Component class="GUI.LoginGUI.Component.Button" name="button11">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="96" green="c7" red="76" type="rgb"/>
@@ -188,7 +188,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="GUI.SaleGroup.LoginGui.Component.Button" name="button12">
+    <Component class="GUI.LoginGUI.Component.Button" name="button12">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="96" green="c7" red="76" type="rgb"/>
@@ -211,7 +211,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="GUI.SaleGroup.LoginGui.Component.Button" name="button13">
+    <Component class="GUI.LoginGUI.Component.Button" name="button13">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="96" green="c7" red="76" type="rgb"/>
@@ -603,7 +603,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="GUI.SaleGroup.LoginGui.Component.Button" name="button14">
+    <Component class="GUI.LoginGUI.Component.Button" name="button14">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="96" green="c7" red="76" type="rgb"/>

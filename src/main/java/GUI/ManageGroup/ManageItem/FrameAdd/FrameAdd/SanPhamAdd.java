@@ -80,8 +80,8 @@ public class SanPhamAdd extends javax.swing.JFrame {
         tfGia = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tfMoTa = new javax.swing.JTextArea();
-        button1 = new GUI.SaleGroup.LoginGui.Component.Button();
-        button2 = new GUI.SaleGroup.LoginGui.Component.Button();
+        button1 = new GUI.LoginGUI.Component.Button();
+        button2 = new GUI.LoginGUI.Component.Button();
         imagePanel2 = new GUI.ManageGroup.ComponentPanel.ImagePanel();
         cbLoai = new GUI.SaleGroup.SellerGUI.Component.MyLoaiSPComboBox();
         cbNCC = new javax.swing.JComboBox<>();
@@ -285,8 +285,8 @@ public class SanPhamAdd extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private GUI.SaleGroup.LoginGui.Component.Button button1;
-    private GUI.SaleGroup.LoginGui.Component.Button button2;
+    private GUI.LoginGUI.Component.Button button1;
+    private GUI.LoginGUI.Component.Button button2;
     private GUI.SaleGroup.SellerGUI.Component.MyLoaiSPComboBox cbLoai;
     private javax.swing.JComboBox<String> cbNCC;
     private GUI.ManageGroup.ComponentPanel.ImagePanel imagePanel2;

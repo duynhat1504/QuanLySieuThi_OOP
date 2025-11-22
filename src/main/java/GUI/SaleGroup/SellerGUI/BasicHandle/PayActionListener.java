@@ -7,7 +7,7 @@ package GUI.SaleGroup.SellerGUI.BasicHandle;
 import BUS.SaleServices.Money;
 import BUS.SaleServices.PayActionBus;
 import DataTransfer.ChiTietHoaDon;
-import BUS.Excel.PDFTool;
+//import BUS.Excel.PDFTool;
 import GUI.SaleGroup.SellerGUI.Component.OptionPaneBill;
 import GUI.SaleGroup.SellerGUI.Component.OrderPanel;
 import GUI.SaleGroup.SellerGUI.SellerMainFrame;
@@ -79,7 +79,7 @@ public class PayActionListener implements java.awt.event.ActionListener{
                 }
                 int maHD = pay.getMaHD();
                 OptionPaneBill.showBillPane("Tiền mặt", total, maNV, tenKH, discount, maHD, datas);
-                PDFTool.renderPDF(maHD);
+//                PDFTool.renderPDF(maHD);
                 
             }
         setBackFirstStatus();

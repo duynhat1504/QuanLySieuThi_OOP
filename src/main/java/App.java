@@ -1,6 +1,6 @@
 
 // import BUS.AccountServices.LoginAction;
-// import GUI.SaleGroup.LoginGui.LoginFrame.LoginGui;
+// import GUI.LoginGUI.LoginFrame.LoginGui;
 import com.formdev.flatlaf.FlatLightLaf;
 import GUI.LoginGUI.LoginFrame.LoginGui;
 

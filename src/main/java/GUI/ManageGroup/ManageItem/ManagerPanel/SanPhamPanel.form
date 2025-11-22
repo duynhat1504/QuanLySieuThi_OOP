@@ -94,7 +94,7 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Component class="GUI.SaleGroup.LoginGui.Component.Button" name="button8">
+    <Component class="GUI.LoginGUI.Component.Button" name="button8">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="96" green="c7" red="76" type="rgb"/>
@@ -117,7 +117,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="GUI.SaleGroup.LoginGui.Component.Button" name="button5">
+    <Component class="GUI.LoginGUI.Component.Button" name="button5">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="96" green="c7" red="76" type="rgb"/>
@@ -180,7 +180,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="GUI.SaleGroup.LoginGui.Component.Button" name="button6">
+    <Component class="GUI.LoginGUI.Component.Button" name="button6">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="96" green="c7" red="76" type="rgb"/>
@@ -302,7 +302,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="GUI.SaleGroup.LoginGui.Component.Button" name="button2">
+    <Component class="GUI.LoginGUI.Component.Button" name="button2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="96" green="c7" red="76" type="rgb"/>

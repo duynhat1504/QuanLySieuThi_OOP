@@ -2,7 +2,7 @@ package GUI.SaleGroup.SellerGUI;
 
 import BUS.AccountServices.LoginAction;
 import BUS.AccountServices.LogoutAction;
-import GUI.SaleGroup.LoginGui.LoginFrame.LoginGui;
+import GUI.LoginGUI.LoginFrame.LoginGui;
 import GUI.SaleGroup.SellerGUI.BasicHandle.AddCustomerAction;
 import GUI.SaleGroup.SellerGUI.BasicHandle.ChangePaymentInfo;
 import GUI.SaleGroup.SellerGUI.BasicHandle.ClearAllAction;
@@ -567,7 +567,7 @@ public class SellerMainFrame extends javax.swing.JFrame {
                 
                 if(logAct == null) System.exit(0);
                 
-                if(!logAct.isRememberMe()){
+                if(!logAct.isRememberLogin()){
                     System.out.println("No remember user!");
                     System.out.println("Login detail: " + logAct.getLoginDetail());
                     LogoutAction.storeLogoutTime(logAct.getLoginDetail());

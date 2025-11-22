@@ -2,11 +2,7 @@ package GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd;
 
 import BUS.BusAccessor.GiamGiaSPBUS;
 import BUS.BusAccessor.SanPhamBUS;
-<<<<<<< HEAD
 import BUS.SaleServices.CheckInfoSale;
-=======
-// import BUS.SaleServices.CheckInfoSale;
->>>>>>> 804c383c5e5796858af8acbd52ff1e5913033631
 import DataTransfer.GiamGiaSP;
 import DataTransfer.SanPham;
 import GUI.ManageGroup.Theme.NhapXuatTheme;

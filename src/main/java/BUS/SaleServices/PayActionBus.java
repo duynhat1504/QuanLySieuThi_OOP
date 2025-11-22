@@ -4,7 +4,7 @@
  */
 package BUS.SaleServices;
 
-import DataAccess.DataAcessObject.*;
+import DataAccess.DataAccessObject.*;
 import DataTransfer.*;
 
 import java.sql.Timestamp;

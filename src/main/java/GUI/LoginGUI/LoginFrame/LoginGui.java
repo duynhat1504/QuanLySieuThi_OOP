@@ -1,7 +1,7 @@
 package GUI.LoginGUI.LoginFrame;
 
 import BUS.AccountServices.LoginAction;
-//import GUI.ManageGroup.ManageItem.ManageFrame.ManageFrame;
+import GUI.ManageGroup.ManageItem.ManagerFrame.ManageFrame;
 //import GUI.SellerGUI.SellerMainFrame;
 import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.JOptionPane;
@@ -430,13 +430,13 @@ public class LoginGui extends javax.swing.JFrame {
     private GUI.LoginGUI.Background.PhoneGui2 phoneGui21;
     // End of variables declaration//GEN-END:variables
 //    private SellerMainFrame saleFrame = new SellerMainFrame(null, this);
-//    private ManageFrame managerFrame = new ManageFrame(null, this);
+    private ManageFrame managerFrame = new ManageFrame(null, this);
     private LoginAction loginAct = new LoginAction();
 
     private void init(){
 
 //        saleFrame.setLogAct(loginAct);
-//        managerFrame.setLogAct(loginAct);
+        managerFrame.setLogAct(loginAct);
         //Kiểm tra authkey
         if(loginAct.checkAuthKey()){
             loginAct.showFrame();

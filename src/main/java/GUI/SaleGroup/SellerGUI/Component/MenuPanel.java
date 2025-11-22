@@ -5,7 +5,7 @@
 package GUI.SaleGroup.SellerGUI.Component;
 
 import BUS.BusAccessor.SanPhamBUS;
-import DataAccess.DataAcessObject.SanPhamDAO;
+import DataAccess.DataAccessObject.SanPhamDAO;
 import DataTransfer.SanPham;
 import GUI.SaleGroup.SellerGUI.BasicHandle.HandleClickAddEvent;
 import java.awt.Dimension;
