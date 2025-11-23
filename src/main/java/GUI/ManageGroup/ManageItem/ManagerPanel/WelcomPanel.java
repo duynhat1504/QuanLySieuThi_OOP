@@ -55,7 +55,6 @@ public class WelcomPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.ManageGroup.ComponentPanel.ImagePanel imagePanel1;
     // End of variables declaration//GEN-END:variables

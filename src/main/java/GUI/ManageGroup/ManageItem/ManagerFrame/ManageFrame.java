@@ -25,9 +25,6 @@ public class ManageFrame extends javax.swing.JFrame {
         this.loginGui = loginGui;
         this.logAct = logAct;
         ManagerTheme.setup();
-        // // Ensure hover color for TabbedPane is white (override theme if needed)
-        // UIManager.put("TabbedPane.hoverColor", Color.WHITE);
-        // UIManager.put("TabbedPane.hoverBackground", Color.WHITE);
         initComponents();
         customsizeTabbedPane();
         init();
@@ -218,7 +215,7 @@ public class ManageFrame extends javax.swing.JFrame {
                 
                 if(logAct == null) System.exit(0);
                 
-                if(!logAct.isRememberLogin()){
+                if(!logAct.isRememberMe()){
                     System.out.println("No remember user!");
                     System.out.println("Login detail: " + logAct.getLoginDetail());
                     LogoutAction.storeLogoutTime(logAct.getLoginDetail());
@@ -230,29 +227,6 @@ public class ManageFrame extends javax.swing.JFrame {
     }
 
     public static void main(String args[]) {
-      
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(ManageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(ManageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(ManageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(ManageFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-
         ManagerTheme.setup();
         
         java.awt.EventQueue.invokeLater(new Runnable() {
