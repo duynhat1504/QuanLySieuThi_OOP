@@ -1,13 +1,14 @@
 package DataAccess.DataAccessObject;
 
-import DataAccess.DatabaseConnector.ConnectManager;
+import java.sql.SQLException;
+import java.util.List;
+
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
-import java.sql.SQLException;
-import java.util.List;
+import DataAccess.DatabaseConnector.ConnectManager;
 
 public abstract class AbstractAccessData<T> {
     protected final ConnectManager connectionManager = new ConnectManager();
