@@ -6,10 +6,7 @@ package GUI.ManageGroup.ComponentPanel;
 
 import GUI.SaleGroup.SellerGUI.Component.RoundPanel;
 
-/**
- *
- * @author huykh
- */
+
 public class ProductTableRow extends RoundPanel {
 
     /**

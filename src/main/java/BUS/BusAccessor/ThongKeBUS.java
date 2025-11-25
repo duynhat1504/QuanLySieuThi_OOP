@@ -8,10 +8,7 @@ import DataTransfer.*;
 
 import java.util.List;
 
-/**
- *
- * @author huykh
- */
+
 public class ThongKeBUS {
     private final SanPhamBUS spBus;
     private final NhanVienBUS nvBus;

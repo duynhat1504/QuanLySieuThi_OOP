@@ -7,15 +7,12 @@ package GUI.ManageGroup.ComponentPanel;
 import BUS.BusAccessor.NhaCungCapBUS;
 import DataTransfer.SanPham;
 
-/**
- *
- * @author huykh
- */
+
 public class ProductDetailPanel extends PanelAdd {
     private SanPham sanpham;
     private static final NhaCungCapBUS nhaccBus = new NhaCungCapBUS();
-//    private static final MaLoai
-    
+    // private static final MaLoai
+
     /**
      * Creates new form ProductDetailPanel
      */
@@ -36,32 +33,33 @@ public class ProductDetailPanel extends PanelAdd {
     public void setSanpham(SanPham sanpham) {
         this.sanpham = sanpham;
         initInfo();
-        System.out.println("Show sanpham: "+sanpham.getTenSP());
+        System.out.println("Show sanpham: " + sanpham.getTenSP());
     }
-    
-    private void initInfo(){
+
+    private void initInfo() {
         String tenNhaCC = nhaccBus.get(sanpham.getMaNCC()).getTenNCC();
         imagePanel.setImagePath(sanpham.getHinhAnh());
-        lbName.setText("<html>"+sanpham.getTenSP());
+        lbName.setText("<html>" + sanpham.getTenSP());
         lbMaSp.setText(Integer.toString(sanpham.getMaSP()));
         lbDonGia.setText(Long.toString(sanpham.getGiaTien()));
-        lbLoai.setText(sanpham.getMaLoai()+"");
-        lbSoLuong.setText(sanpham.getSoLuong()+"");
+        lbLoai.setText(sanpham.getMaLoai() + "");
+        lbSoLuong.setText(sanpham.getSoLuong() + "");
         lbNhaCC.setText(tenNhaCC);
         String mota = sanpham.getMoTa();
-        if (mota.length()>270){
-            mota = "<html>" +sanpham.getMoTa().substring(0, 268);
+        if (mota.length() > 270) {
+            mota = "<html>" + sanpham.getMoTa().substring(0, 268);
             mota += "...";
         } else {
-            mota = "<html>"+sanpham.getMoTa();
+            mota = "<html>" + sanpham.getMoTa();
         }
         lbMoTa.setText(mota);
-        imagePanel.setToolTipText("<html> <div style='width:200px'>"+sanpham.getMoTa());
+        imagePanel.setToolTipText("<html> <div style='width:200px'>" + sanpham.getMoTa());
         this.revalidate();
         this.repaint();
     }
-    
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         lbName = new javax.swing.JLabel();
@@ -79,7 +77,7 @@ public class ProductDetailPanel extends PanelAdd {
         lbNhaCC = new javax.swing.JLabel();
         imagePanel = new GUI.ManageGroup.ComponentPanel.ImagePanel();
 
-        setBackground(new java.awt.Color(245, 245, 245));
+        setBackground(new java.awt.Color(128, 0, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbName.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -119,29 +117,29 @@ public class ProductDetailPanel extends PanelAdd {
         add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(258, 140, -1, -1));
 
         lbMoTa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lbMoTa.setForeground(new java.awt.Color(17, 86, 125));
+        lbMoTa.setForeground(new java.awt.Color(255, 255, 255));
         lbMoTa.setText("<html> ");
         lbMoTa.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         add(lbMoTa, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 140, 610, 60));
 
         lbMaSp.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbMaSp.setForeground(new java.awt.Color(17, 86, 125));
+        lbMaSp.setForeground(new java.awt.Color(255, 255, 255));
         add(lbMaSp, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 60, -1, -1));
 
         lbDonGia.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbDonGia.setForeground(new java.awt.Color(17, 86, 125));
+        lbDonGia.setForeground(new java.awt.Color(255, 255, 255));
         add(lbDonGia, new org.netbeans.lib.awtextra.AbsoluteConstraints(327, 100, -1, -1));
 
         lbLoai.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbLoai.setForeground(new java.awt.Color(17, 86, 125));
+        lbLoai.setForeground(new java.awt.Color(255, 255, 255));
         add(lbLoai, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, -1, -1));
 
         lbSoLuong.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbSoLuong.setForeground(new java.awt.Color(17, 86, 125));
+        lbSoLuong.setForeground(new java.awt.Color(255, 255, 255));
         add(lbSoLuong, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 60, -1, -1));
 
         lbNhaCC.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lbNhaCC.setForeground(new java.awt.Color(17, 86, 125));
+        lbNhaCC.setForeground(new java.awt.Color(255, 255, 255));
         add(lbNhaCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(584, 100, -1, -1));
 
         imagePanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -149,17 +147,14 @@ public class ProductDetailPanel extends PanelAdd {
         javax.swing.GroupLayout imagePanelLayout = new javax.swing.GroupLayout(imagePanel);
         imagePanel.setLayout(imagePanelLayout);
         imagePanelLayout.setHorizontalGroup(
-            imagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 157, Short.MAX_VALUE)
-        );
+                imagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 157, Short.MAX_VALUE));
         imagePanelLayout.setVerticalGroup(
-            imagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 136, Short.MAX_VALUE)
-        );
+                imagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 136, Short.MAX_VALUE));
 
         add(imagePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 42, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.ManageGroup.ComponentPanel.ImagePanel imagePanel;

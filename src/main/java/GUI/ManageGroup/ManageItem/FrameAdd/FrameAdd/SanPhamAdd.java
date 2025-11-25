@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd;
+
 import BUS.BusAccessor.LoaiSanPhamBUS;
 import BUS.BusAccessor.NhaCungCapBUS;
 import BUS.BusAccessor.SanPhamBUS;
@@ -24,46 +25,47 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  * @author ACER
  */
 public class SanPhamAdd extends javax.swing.JFrame {
-      private String url;
-      SanPhamBUS sanphamBUS = new SanPhamBUS();
-      SanPhamValidate spVali = new SanPhamValidate();
-      SanPhamToData spData =new SanPhamToData();
-      SanPhamPanel spPanel = new SanPhamPanel();
-     LoaiSanPhamBUS maloaiBUS = new LoaiSanPhamBUS();
-     NhaCungCapBUS  nccBUS = new NhaCungCapBUS();
-     
-      
+    private String url;
+    SanPhamBUS sanphamBUS = new SanPhamBUS();
+    SanPhamValidate spVali = new SanPhamValidate();
+    SanPhamToData spData = new SanPhamToData();
+    SanPhamPanel spPanel = new SanPhamPanel();
+    LoaiSanPhamBUS maloaiBUS = new LoaiSanPhamBUS();
+    NhaCungCapBUS nccBUS = new NhaCungCapBUS();
 
     public SanPhamAdd() {
         initComponents();
         this.setDefaultCloseOperation(0);
         Loadcb();
-       // Tạo mã sản phẩm mới
-        tfMaSanPham.setText(String.valueOf(sanphamBUS.getNewest().getMaSP()+1));
+        // Tạo mã sản phẩm mới
+        tfMaSanPham.setText(String.valueOf(sanphamBUS.getNewest().getMaSP() + 1));
     }
+
     // reset Text
-    public void setNullText(){
-              tfSanPham.setText("");
-              tfGia.setText("");
-              tfMoTa.setText("");
-              imagePanel2.setImage(null);
-              imagePanel2.setBackground(Color.decode("#3C3F41"));
+    public void setNullText() {
+        tfSanPham.setText("");
+        tfGia.setText("");
+        tfMoTa.setText("");
+        imagePanel2.setImage(null);
+        imagePanel2.setBackground(Color.decode("#3C3F41"));
     }
-    public void Loadcb(){
-         List <NhaCungCap> iNCC =nccBUS.getAll();
-         if (iNCC == null || iNCC.isEmpty()) return;
-        for(int i=0;i< iNCC.size();i++){
-        cbNCC.addItem(GetLoai(iNCC.get(i).getMaNCC()));
+
+    public void Loadcb() {
+        List<NhaCungCap> iNCC = nccBUS.getAll();
+        if (iNCC == null || iNCC.isEmpty())
+            return;
+        for (int i = 0; i < iNCC.size(); i++) {
+            cbNCC.addItem(GetLoai(iNCC.get(i).getMaNCC()));
         }
-       cbLoai.getLoaiSPexAll();
-}
-      public String GetLoai(int NCC){
-        return  nccBUS.get(NCC).getTenNCC();
+        cbLoai.getLoaiSPexAll();
     }
 
+    public String GetLoai(int NCC) {
+        return nccBUS.get(NCC).getTenNCC();
+    }
 
-
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         shape1 = new GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd.Shape();
@@ -89,13 +91,11 @@ public class SanPhamAdd extends javax.swing.JFrame {
         javax.swing.GroupLayout shape1Layout = new javax.swing.GroupLayout(shape1);
         shape1.setLayout(shape1Layout);
         shape1Layout.setHorizontalGroup(
-            shape1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+                shape1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE));
         shape1Layout.setVerticalGroup(
-            shape1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+                shape1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 100, Short.MAX_VALUE));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -183,13 +183,11 @@ public class SanPhamAdd extends javax.swing.JFrame {
         javax.swing.GroupLayout imagePanel2Layout = new javax.swing.GroupLayout(imagePanel2);
         imagePanel2.setLayout(imagePanel2Layout);
         imagePanel2Layout.setHorizontalGroup(
-            imagePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+                imagePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE));
         imagePanel2Layout.setVerticalGroup(
-            imagePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+                imagePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE));
 
         sanPhamAddBackground1.add(imagePanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 150, 100));
         sanPhamAddBackground1.add(cbLoai, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 130, 30));
@@ -199,64 +197,67 @@ public class SanPhamAdd extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sanPhamAddBackground1, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(sanPhamAddBackground1, javax.swing.GroupLayout.DEFAULT_SIZE, 379,
+                                Short.MAX_VALUE));
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(sanPhamAddBackground1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(sanPhamAddBackground1, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void button2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button2MouseClicked
+    private void button2MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_button2MouseClicked
 
         String maSanPham = tfMaSanPham.getText();
-        int maNhaCC = cbNCC.getSelectedIndex()+1;
-        String tenSanPham =tfSanPham.getText();
+        int maNhaCC = cbNCC.getSelectedIndex() + 1;
+        String tenSanPham = tfSanPham.getText();
         int loai = cbLoai.getSelectedMaLoai();
         String gia = tfGia.getText();
-        String moTa =tfMoTa.getText();
-        if(!spVali.AllValidate(gia,tenSanPham,moTa,url)) {
+        String moTa = tfMoTa.getText();
+        if (!spVali.AllValidate(gia, tenSanPham, moTa, url)) {
             JOptionPane.showMessageDialog(this, "The voucher already exists or illegal");
+        } else {
+            spData.AddSanPham(gia, tenSanPham, maNhaCC, loai, moTa, url);
+            JOptionPane.showMessageDialog(this, "Success");
+            tfMaSanPham.setText(String.valueOf(sanphamBUS.getNewest().getMaSP() + 1));
+            setNullText();
         }
-        else {
-              spData.AddSanPham(gia, tenSanPham, maNhaCC, loai, moTa,url);
-              JOptionPane.showMessageDialog(this, "Success");
-              tfMaSanPham.setText(String.valueOf(sanphamBUS.getNewest().getMaSP()+1));
-              setNullText();
-              }
-    }//GEN-LAST:event_button2MouseClicked
+    }// GEN-LAST:event_button2MouseClicked
 
-    private void imagePanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_imagePanel2MouseClicked
-       JFileChooser fileChooser = new JFileChooser();
-        FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("anh", "jpg","png");
+    private void imagePanel2MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_imagePanel2MouseClicked
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter imageFilter = new FileNameExtensionFilter("anh", "jpg", "png");
         fileChooser.setFileFilter(imageFilter);
         fileChooser.setMultiSelectionEnabled(false);
         int x = fileChooser.showDialog(this, "Chon file");
-        if(x == JFileChooser.APPROVE_OPTION){
+        if (x == JFileChooser.APPROVE_OPTION) {
             File file = fileChooser.getSelectedFile();
-           
-           String[] parts = file.getName().split("\\.");
+
+            String[] parts = file.getName().split("\\.");
             url = parts[0];
             imagePanel2.setImagePathSanPham(file.getAbsolutePath());
             imagePanel2.setBackground(Color.decode("#F69E18"));
         }
-    }//GEN-LAST:event_imagePanel2MouseClicked
+    }// GEN-LAST:event_imagePanel2MouseClicked
 
-    private void button1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_button1MouseClicked
+    private void button1MouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_button1MouseClicked
         this.setVisible(false);
-    }//GEN-LAST:event_button1MouseClicked
+    }// GEN-LAST:event_button1MouseClicked
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
+        // (optional) ">
+        /*
+         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
+         * look and feel.
+         * For details see
+         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -266,15 +267,19 @@ public class SanPhamAdd extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SanPhamAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SanPhamAdd.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SanPhamAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SanPhamAdd.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SanPhamAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SanPhamAdd.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SanPhamAdd.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SanPhamAdd.class.getName()).log(java.util.logging.Level.SEVERE, null,
+                    ex);
         }
-        //</editor-fold>
+        // </editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
