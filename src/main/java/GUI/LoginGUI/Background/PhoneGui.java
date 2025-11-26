@@ -25,11 +25,10 @@ public class PhoneGui extends javax.swing.JPanel {
                 java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
 
         // Định nghĩa màu sắc
-        Color xanhdam = Color.decode("#60bfbe");  // Màu xanh đậm
+        Color doNhat = new Color(209, 55, 55);
         Color trang = Color.decode("#FFFFFF");    // Màu trắng
 
-        // Vẽ hình chữ nhật bo tròn màu xanh (background)
-        g2d.setColor(xanhdam);
+        g2d.setColor(doNhat);
         g2d.fillRoundRect(0, 0,
                 getWidth() - getWidth()/50,   // Chiều rộng (lùi vào 2%)
                 getHeight() - getHeight()/50, // Chiều cao (lùi vào 2%)

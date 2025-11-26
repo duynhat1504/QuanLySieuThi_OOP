@@ -44,7 +44,7 @@ public class HoaDonDAO extends AbstractAccessData<HoaDon> implements ISimpleAcce
     }
     
     public List<HoaDon> selectHoaDonTrongKhoang(String startDay, String endDay){
-        return executeQueryList("SELECT * FROM HOADON WHERE NGAYHD >= ? AND NGAYHD <= ? AND IS_DELETE=0", startDay, endDay);
+        return executeQueryList("SELECT * FROM HOADON WHERE NGAYHD >= ? AND NGAYHD <= ?", startDay, endDay);
     }
     
     public static void main(String[] argv){

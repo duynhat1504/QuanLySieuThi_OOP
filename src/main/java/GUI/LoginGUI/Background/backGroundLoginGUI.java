@@ -27,7 +27,7 @@ public class backGroundLoginGUI extends JPanel {
     protected void paintComponent(Graphics g) {
         Graphics2D g2d = (Graphics2D) g.create();
         Color yellow = Color.decode("#fcdca9");
-        Color green = Color.decode("#62C4C3");
+        Color red = new Color(128, 0, 0);
         int polyX[] = {0, getWidth()/2, getWidth()/2, 0};
         int polyY[] = {0, 0, getHeight(), getHeight()};
         int polyX2[] = {getWidth()/2, getWidth(), getWidth(), getWidth()/2};
@@ -35,7 +35,7 @@ public class backGroundLoginGUI extends JPanel {
 
         g2d.setColor(yellow);
         g2d.fillPolygon(polyX, polyY, 4);
-        g2d.setColor(green);
+        g2d.setColor(red);
         g2d.fillPolygon(polyX2, polyY2, 4);
 
         g2d.dispose();

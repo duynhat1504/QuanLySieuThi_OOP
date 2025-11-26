@@ -215,7 +215,7 @@ public class ManageFrame extends javax.swing.JFrame {
                 
                 if(logAct == null) System.exit(0);
                 
-                if(!logAct.isRememberMe()){
+                if(!logAct.isRememberLogin()){
                     System.out.println("No remember user!");
                     System.out.println("Login detail: " + logAct.getLoginDetail());
                     LogoutAction.storeLogoutTime(logAct.getLoginDetail());

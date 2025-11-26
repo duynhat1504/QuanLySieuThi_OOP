@@ -44,10 +44,10 @@ public class LoginGui extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        backGroundLoginGUI1.setBackground(new java.awt.Color(98, 196, 195));
+        backGroundLoginGUI1.setBackground(new java.awt.Color(255, 111, 111));
 
         button1.setBackground(new java.awt.Color(255, 255, 255));
-        button1.setForeground(new java.awt.Color(96, 191, 190));
+        button1.setForeground(new java.awt.Color(255, 111, 111));
         button1.setText("ĐĂNG NHẬP");
         button1.setAlignmentY(0.0F);
         button1.setFont(new java.awt.Font("Segoe UI", 1, 14)); 
@@ -202,7 +202,7 @@ public class LoginGui extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Dễ Dàng - Bảo Mật - Nhanh Chóng");
 
-        imagePanel2.setBackground(new java.awt.Color(98, 196, 195));
+        imagePanel2.setBackground(new java.awt.Color(129, 0, 0));
         imagePanel2.setImage(new javax.swing.ImageIcon(getClass().getResource("/GUI/LoginGUI/Image/icons8-user-100.png"))); 
 
         javax.swing.GroupLayout imagePanel2Layout = new javax.swing.GroupLayout(imagePanel2);
@@ -410,7 +410,7 @@ public class LoginGui extends javax.swing.JFrame {
     private GUI.LoginGUI.Background.PhoneGui phoneGui1;
     private GUI.LoginGUI.Background.PhoneGui2 phoneGui21;
     private ManageFrame managerFrame = new ManageFrame(null, this);
-    private LoginAction loginAct = new LoginAction(null, managerFrame);
+    private LoginAction loginAct = new LoginAction(managerFrame);
 
     private void init(){
         managerFrame.setLogAct(loginAct);

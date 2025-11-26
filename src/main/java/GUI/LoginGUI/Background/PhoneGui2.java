@@ -29,19 +29,19 @@ public class PhoneGui2 extends javax.swing.JPanel {
                 java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
 
         // Định nghĩa màu sắc
-        Color xanh = Color.decode("#c8e9fa");      // Màu xanh nhạt
-        Color xanhdam = Color.decode("#b5dff5");   // Màu xanh đậm hơn
+        Color doNhat = new Color(209, 55, 55);
+        Color doDam = new Color(128, 0, 0);
 
-        // Vẽ hình chữ nhật bo tròn màu xanh đậm (shadow/background)
-        g2d.setColor(xanhdam);
+        // Vẽ hình chữ nhật bo tròn màu doNhatđậm (shadow/background)
+        g2d.setColor(doDam);
         g2d.fillRoundRect(20,                                       // X: 20px từ trái
                 getHeight()/14 + 10,                       // Y: ~7.1% + 10px từ trên
                 getWidth() - getWidth()/14,                // Width: ~92.9% width
                 getHeight() - getHeight()/10,              // Height: 90% height
                 120, 120);                                // Bo góc 120px
 
-        // Vẽ hình chữ nhật bo tròn màu xanh nhạt (foreground)
-        g2d.setColor(xanh);
+        // Vẽ hình chữ nhật bo tròn màu doNhatnhạt (foreground)
+        g2d.setColor(doNhat);
         g2d.fillRoundRect(getWidth()/14,                           // X: ~7.1% từ trái
                 10,                                       // Y: 10px từ trên
                 getWidth() - getWidth()/14,               // Width: ~92.9% width

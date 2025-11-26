@@ -104,7 +104,6 @@ public class ThongKePanel extends javax.swing.JPanel {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel122 = new javax.swing.JLabel();
-        button20 = new GUI.LoginGUI.Component.Button();
         jLabel36 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
@@ -469,12 +468,6 @@ public class ThongKePanel extends javax.swing.JPanel {
         jLabel122.setText("THỐNG KÊ");
         add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 30));
 
-        button20.setBackground(new java.awt.Color(118, 199, 150));
-        button20.setForeground(new java.awt.Color(255, 255, 255));
-        button20.setText("XUẤT EXCEL");
-        button20.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        button20.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        add(button20, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 20, 150, 30));
 
         jLabel36.setBackground(new java.awt.Color(255, 255, 255));
         jLabel36.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -601,7 +594,6 @@ public class ThongKePanel extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private GUI.LoginGUI.Component.Button button20;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
