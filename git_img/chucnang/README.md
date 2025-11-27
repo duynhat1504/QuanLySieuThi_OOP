@@ -1,1 +1,0 @@
-#Thư mục này để chứa ảnh kết quả đồ án, vui lòng k để ảnh sản phẩm vào đây.
