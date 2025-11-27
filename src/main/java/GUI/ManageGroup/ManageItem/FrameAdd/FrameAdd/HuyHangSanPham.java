@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd;
 
 import BUS.BusAccessor.CTPhieuHuyBUS;
@@ -39,10 +35,6 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellEditor;
 
-/**
- *
- * @author ACER
- */
 public class HuyHangSanPham extends javax.swing.JFrame {
     private final CTPhieuHuyBUS ctPhieuHuyBus;
     private final NhanVienBUS nhanvienBus;

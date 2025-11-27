@@ -1,12 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package GUI.ManageGroup.Handle.VoucherHandle;
 
 
-import DataAccess.DataAccessObject.VoucherDAO;
-import DataTransfer.Voucher;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,10 +8,9 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author MY ACER
- */
+import DataAccess.DataAccessObject.VoucherDAO;
+import DataTransfer.Voucher;
+
 public class VoucherHandleBUS {
     VoucherDAO voucherDao = new VoucherDAO();
     

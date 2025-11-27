@@ -1,17 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
-/**
- *
- * @author TUANMINH
- */
+
 public class GiamGiaSanPhamAddBackground extends javax.swing.JPanel {
 
     /**

@@ -1,16 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package GUI.ManageGroup.Handle.NhanVienHandle;
 
-import GUI.SaleGroup.SellerGUI.BasicHandle.EmailExampleTest;
 import DataTransfer.NhanVien;
+import GUI.ManagerSale.BasicHandle.EmailExampleTest;
 
-/**
- *
- * @author MY ACER
- */
+
 public class NhanVienValidate {
     private final NhanVien nhanvienValidate;
     private final EmailExampleTest emailExampleTest;

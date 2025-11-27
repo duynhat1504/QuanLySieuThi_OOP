@@ -4,15 +4,14 @@
  */
 package GUI.ManageGroup.Handle.VoucherHandle;
 
-import BUS.SaleServices.CheckInfoSale;
-import DataTransfer.Voucher;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
-/**
- *
- * @author MY ACER
- */
+import BUS.SaleServices.CheckInfoSale;
+import DataTransfer.Voucher;
+
+
 public class VoucherValidate {
     private Voucher validatedVoucher;
     private final CheckInfoSale checkInfoSale;
@@ -23,11 +22,23 @@ public class VoucherValidate {
     }
 
     public boolean validateAll(String codeVoucher, String minimizeVoucher, String maxmizeVoucher, String startDay, String endDay, String percent, String numberUser, String describe) {
-        return checkCodeVoucher(codeVoucher) && checkHasVoucher(codeVoucher) && checkMinimizeVoucher(minimizeVoucher) && checkMaxmizeVoucher(maxmizeVoucher) && isTimeStampValid(startDay) && isTimeStampValid(endDay) && isCheckPercent(percent) && isCheckNumberUser(numberUser) && isCheckDescribe(describe);
+        return checkCodeVoucher(codeVoucher) 
+                && checkMinimizeVoucher(minimizeVoucher) 
+                && checkMaxmizeVoucher(maxmizeVoucher) 
+                && checkDateLogic(startDay, endDay) // Sửa: Dùng hàm check logic ngày
+                && isCheckPercent(percent) 
+                && isCheckNumberUser(numberUser) 
+                && isCheckDescribe(describe)
+                && checkHasVoucher(codeVoucher);
     }
 
     public boolean validateAllExpectCodeVoucher(String minimizeVoucher, String maxmizeVoucher, String startDay, String endDay, String percent, String numberUser, String describe) {
-        return checkMinimizeVoucher(minimizeVoucher) && checkMaxmizeVoucher(maxmizeVoucher) && isTimeStampValid(startDay) && isTimeStampValid(endDay) && isCheckPercent(percent) && isCheckNumberUser(numberUser) && isCheckDescribe(describe);
+        return checkMinimizeVoucher(minimizeVoucher) 
+                && checkMaxmizeVoucher(maxmizeVoucher) 
+                && checkDateLogic(startDay, endDay) 
+                && isCheckPercent(percent) 
+                && isCheckNumberUser(numberUser) 
+                && isCheckDescribe(describe);
     }
 
     private boolean checkHasVoucher(String codeVoucher) {
@@ -58,27 +69,45 @@ public class VoucherValidate {
         return true;
     }
 
-
-    public static boolean isTimeStampValid(String inputString) {
-        SimpleDateFormat format = new java.text.SimpleDateFormat("dd-MM-yyyy");
+    public boolean checkDateLogic(String startDay, String endDay) {
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
+        format.setLenient(false); // Bắt buộc đúng ngày (không chấp nhận 32/01)
         try {
-            format.parse(inputString);
+            Date start = format.parse(startDay);
+            Date end = format.parse(endDay);
+            
+            // Ngày kết thúc phải sau hoặc bằng ngày bắt đầu
+            if (end.before(start)) {
+                System.out.println("Lỗi: Ngày kết thúc trước ngày bắt đầu");
+                return false;
+            }
             return true;
         } catch (ParseException e) {
+            System.out.println("Lỗi format ngày tháng");
             return false;
         }
     }
 
     public boolean isCheckPercent(String percent) {
-        return Integer.valueOf(percent) > 0;
+        try {
+            int val = Integer.parseInt(percent);
+            return val > 0 && val <= 100; // Phần trăm phải từ 1-100
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
     public boolean isCheckNumberUser(String numberUser) {
-        return Integer.valueOf(numberUser) > 0;
+        try {
+            return Integer.parseInt(numberUser) > 0;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
     public boolean isCheckDescribe(String describe) {
-        return describe.length() > 10;
+        if (describe == null) return false;
+        return describe.length() > 0;
     }
 
     public Voucher getValidatedVoucher() {

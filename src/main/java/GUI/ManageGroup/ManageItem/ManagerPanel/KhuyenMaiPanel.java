@@ -234,23 +234,23 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         shape9.add(imagePanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 160, 140));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
-        jLabel9.setForeground(new java.awt.Color(17, 86, 125));
+        jLabel9.setForeground(new java.awt.Color(220, 220, 220));
         shape9.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 110, 20));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
-        jLabel11.setForeground(new java.awt.Color(17, 86, 125));
+        jLabel11.setForeground(new java.awt.Color(220, 220, 220));
         shape9.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 120, 110, 20));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
-        jLabel12.setForeground(new java.awt.Color(17, 86, 125));
+        jLabel12.setForeground(new java.awt.Color(220, 220, 220));
         shape9.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 110, 20));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 12));
-        jLabel13.setForeground(new java.awt.Color(17, 86, 125));
+        jLabel13.setForeground(new java.awt.Color(220, 220, 220));
         shape9.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 110, 20));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
-        jLabel10.setForeground(new java.awt.Color(17, 86, 125));
+        jLabel10.setForeground(new java.awt.Color(220, 220, 220));
         shape9.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 110, 20));
 
         jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 14)); 
@@ -474,27 +474,27 @@ public class KhuyenMaiPanel extends javax.swing.JPanel {
         shape10.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, 120, -1));
 
         lbNgayBD.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
-        lbNgayBD.setForeground(new java.awt.Color(17, 86, 125));
+        lbNgayBD.setForeground(new java.awt.Color(220, 220, 220));
         shape10.add(lbNgayBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, 100, 20));
 
         lbGiaTriToiThieu.setFont(new java.awt.Font("Segoe UI", 1, 12));
-        lbGiaTriToiThieu.setForeground(new java.awt.Color(17, 86, 125));
+        lbGiaTriToiThieu.setForeground(new java.awt.Color(220, 220, 220));
         shape10.add(lbGiaTriToiThieu, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, 100, 20));
 
         lbPtGiam.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
-        lbPtGiam.setForeground(new java.awt.Color(17, 86, 125));
+        lbPtGiam.setForeground(new java.awt.Color(220, 220, 220));
         shape10.add(lbPtGiam, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, 100, 20));
 
         lbLuotSD.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
-        lbLuotSD.setForeground(new java.awt.Color(17, 86, 125));
+        lbLuotSD.setForeground(new java.awt.Color(220, 220, 220));
         shape10.add(lbLuotSD, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 130, 100, 20));
 
         lbNgayKT.setFont(new java.awt.Font("Segoe UI", 1, 12)); 
-        lbNgayKT.setForeground(new java.awt.Color(17, 86, 125));
+        lbNgayKT.setForeground(new java.awt.Color(220, 220, 220));
         shape10.add(lbNgayKT, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 160, 100, 20));
 
         lbKMToiDa.setFont(new java.awt.Font("Segoe UI", 1, 12));
-        lbKMToiDa.setForeground(new java.awt.Color(17, 86, 125));
+        lbKMToiDa.setForeground(new java.awt.Color(220, 220, 220));
         shape10.add(lbKMToiDa, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 100, 20));
 
         add(shape10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 520, 240));

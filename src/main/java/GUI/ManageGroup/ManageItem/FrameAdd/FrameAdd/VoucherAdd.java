@@ -6,6 +6,7 @@ import GUI.ManageGroup.Handle.VoucherHandle.VoucherValidate;
 import DataTransfer.Voucher;
 import java.text.SimpleDateFormat;
 import javax.swing.JOptionPane;
+import com.raven.datechooser.DateChooser;
 
 public class VoucherAdd extends javax.swing.JFrame {
     private String maVoucher;
@@ -157,13 +158,18 @@ public class VoucherAdd extends javax.swing.JFrame {
         txtGiaTriToiThieu.setBackground(new java.awt.Color(255, 255, 255));
 
         txtNgayBD.setBackground(new java.awt.Color(255, 255, 255));
-        txtNgayBD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNgayBDActionPerformed(evt);
-            }
-        });
+        dateChooserBD = new DateChooser();
+        dateChooserBD.setTextRefernce(txtNgayBD);
+        dateChooserBD.setForeground(new java.awt.Color(128, 0, 0));
+        dateChooserBD.setDateFormat("dd-MM-yyyy");
+
+        
 
         txtNgayKT.setBackground(new java.awt.Color(255, 255, 255));
+        dateChooserKT = new DateChooser();
+        dateChooserKT.setTextRefernce(txtNgayKT);
+        dateChooserKT.setForeground(new java.awt.Color(128, 0, 0));
+        dateChooserKT.setDateFormat("dd-MM-yyyy");
 
         txtPtGiam.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -326,19 +332,22 @@ public class VoucherAdd extends javax.swing.JFrame {
         String describe =  txtaMoTa.getText();
         
         if(isInsert){
-            if (!voucherValidate.validateAll(codeVoucher , minimizeVoucher, maxmizeVoucher, startDay, endDay, percent, numberUse, describe)){
+            if (!voucherValidate.validateAll(codeVoucher , minimizeVoucher, maxmizeVoucher, startDay, endDay, percent, numberUse, describe)) {
+                if (!voucherValidate.checkDateLogic(startDay, endDay)) {
+                    JOptionPane.showMessageDialog(this, "Ngày kết thúc phải sau hoặc bằng ngày bắt đầu!", "Lỗi", JOptionPane.ERROR_MESSAGE);
+                }
                 JOptionPane.showMessageDialog(this, "The voucher already exists or illegal");
             }else {          
                 VoucherHandleBUS themVoucher = new VoucherHandleBUS();
                 boolean flag = themVoucher.AddVoucher(codeVoucher, minimizeVoucher, maxmizeVoucher, startDay, endDay, percent, numberUse, describe);
-                if(flag) JOptionPane.showConfirmDialog(this, "Inserted successfully!!!", "Thông báo", JOptionPane.CLOSED_OPTION);
+                if(flag) JOptionPane.showConfirmDialog(this, "Thêm thành công!!!", "Thông báo", JOptionPane.CLOSED_OPTION);
                 dispose();
             }
         }else{
             if(voucherValidate.validateAllExpectCodeVoucher(minimizeVoucher, maxmizeVoucher, startDay, endDay, percent, numberUse, describe)){
                 VoucherHandleBUS themVoucher = new VoucherHandleBUS();
                 boolean flag = themVoucher.EditVoucher(codeVoucher, minimizeVoucher, maxmizeVoucher, startDay, endDay, percent, numberUse, describe);
-                if(flag) JOptionPane.showConfirmDialog(this, "Updated successfully!!!", "Thông báo", JOptionPane.CLOSED_OPTION);
+                if(flag) JOptionPane.showConfirmDialog(this, "Cập nhật thành công!!!", "Thông báo", JOptionPane.CLOSED_OPTION);
                 dispose();
             }else JOptionPane.showMessageDialog(this, "Some values was wrong!!!");
         }
@@ -409,7 +418,8 @@ public class VoucherAdd extends javax.swing.JFrame {
     private GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd.VoucherAddBackground voucherAddBackground1;
     private final VoucherBUS voucherBus = new VoucherBUS();
     private Voucher voucher;
-    private final SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+    private DateChooser dateChooserBD;
+    private DateChooser dateChooserKT;
     
     
     private void init(){
@@ -418,8 +428,8 @@ public class VoucherAdd extends javax.swing.JFrame {
             this.txtCodeVoucher.setText(maVoucher);
             this.txtGiaTriToiThieu.setText(voucher.getGiaTriToiThieu()+"");
             this.txtGiaTriToiDa.setText(voucher.getKmToiDa()+"");
-            this.txtNgayBD.setText(df.format(voucher.getNgayBD()));
-            this.txtNgayKT.setText(df.format(voucher.getNgayKT()));
+            dateChooserBD.setSelectedDate(voucher.getNgayBD());
+            dateChooserKT.setSelectedDate(voucher.getNgayKT());
             this.txtPtGiam.setText(voucher.getPtGiam()+"");
             this.txtSoLuotSD.setText(voucher.getSoLuotSD()+"");
             this.txtaMoTa.setText(voucher.getMoTa());

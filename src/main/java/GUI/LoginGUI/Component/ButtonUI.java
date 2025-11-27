@@ -1,12 +1,14 @@
 package GUI.LoginGUI.Component;
 
-import com.lowagie.text.Graphic;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 
-import javax.swing.*;
+import javax.swing.AbstractButton;
+import javax.swing.JComponent;
 import javax.swing.border.EmptyBorder;
-import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicButtonUI;
-import java.awt.*;
 
 public class ButtonUI extends BasicButtonUI {
     public ButtonUI() {
