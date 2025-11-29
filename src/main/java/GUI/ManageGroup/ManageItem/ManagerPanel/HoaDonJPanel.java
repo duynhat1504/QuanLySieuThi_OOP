@@ -225,19 +225,19 @@ public class HoaDonJPanel extends javax.swing.JPanel {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14));
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("");
         shape42.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 120, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14));
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("");
         shape42.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 46, 140, 20));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14));
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("");//so luong
         shape42.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 90, 120, 20));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14));
-        jLabel5.setText("jLabel5");
+        jLabel5.setText("");
         shape42.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 160, 20));
 
         shape40.add(shape42, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 10, 290, 220));

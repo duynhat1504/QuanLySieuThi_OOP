@@ -5,10 +5,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.GroupLayout;
 
-/**
- *
- * @author ACER
- */
 public class PhoneGui extends javax.swing.JPanel {
 
     public PhoneGui() {
