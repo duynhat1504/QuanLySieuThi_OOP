@@ -488,7 +488,7 @@ jTable2.getTableHeader().setForeground(Color.WHITE);            // chữ trắng
         jLabel10.setBackground(new java.awt.Color(0, 204, 204));
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Mã phiếu nhập");
+        jLabel10.setText("Mã phiếu hủy");
         roundPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 120, -1));
         roundPanel3.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 210, 40));
 
