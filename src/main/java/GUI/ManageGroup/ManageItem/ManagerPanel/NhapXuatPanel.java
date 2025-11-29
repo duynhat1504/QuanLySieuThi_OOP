@@ -1,6 +1,20 @@
 
 package GUI.ManageGroup.ManageItem.ManagerPanel;
 
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.sql.Timestamp;
+import java.util.List;
+
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPopupMenu;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
+
+import com.raven.datechooser.DateChooser;
+import com.raven.datechooser.SelectedDate;
+
 import BUS.BusAccessor.NhanVienBUS;
 import BUS.BusAccessor.PhieuHuyBUS;
 import BUS.BusAccessor.PhieuNhapBUS;
@@ -8,19 +22,7 @@ import DataTransfer.PhieuHuy;
 import DataTransfer.PhieuNhap;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.HuyHangSanPham;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.NhapHangSanPham;
-import GUI.ManageGroup.ManageItem.ManagerFrame.ManageFrame;
 import GUI.ManageGroup.Theme.NhapHuyPanel;
-import com.raven.datechooser.DateChooser;
-import com.raven.datechooser.SelectedDate;
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.sql.Timestamp;
-import java.util.List;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPopupMenu;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 
 public class NhapXuatPanel extends javax.swing.JPanel {
     private final PhieuNhapBUS nhapBus;
@@ -488,7 +490,7 @@ jTable2.getTableHeader().setForeground(Color.WHITE);            // chữ trắng
         jLabel10.setBackground(new java.awt.Color(0, 204, 204));
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Mã phiếu nhập");
+        jLabel10.setText("Mã phiếu hủy");
         roundPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 120, -1));
         roundPanel3.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 210, 40));
 
