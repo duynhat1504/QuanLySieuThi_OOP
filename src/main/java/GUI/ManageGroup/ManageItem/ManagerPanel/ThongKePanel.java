@@ -115,7 +115,7 @@ public class ThongKePanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel31.setBackground(new java.awt.Color(119, 176, 210));
+        jPanel31.setBackground(new Color(212, 0, 0));
 
         jPanel37.setBackground(new java.awt.Color(255, 255, 255));
         jPanel37.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -135,7 +135,7 @@ public class ThongKePanel extends javax.swing.JPanel {
 
         jPanel37.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 56, -1, -1));
 
-        jLabel57.setBackground(new java.awt.Color(119, 176, 210));
+        jLabel57.setBackground(new Color(212, 0, 0));
         jLabel57.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel57.setForeground(new java.awt.Color(0, 153, 204));
         jLabel57.setText("NHÂN VIÊN");
@@ -200,7 +200,7 @@ public class ThongKePanel extends javax.swing.JPanel {
 
         add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 136, -1, -1));
 
-        jPanel34.setBackground(new java.awt.Color(119, 176, 210));
+        jPanel34.setBackground(new Color(212, 0, 0));
 
         jPanel29.setBackground(new java.awt.Color(255, 255, 255));
         jPanel29.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -287,7 +287,7 @@ public class ThongKePanel extends javax.swing.JPanel {
 
         add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(267, 156, -1, -1));
 
-        jPanel28.setBackground(new java.awt.Color(119, 176, 210));
+        jPanel28.setBackground(new Color(212, 0, 0));
 
         jPanel33.setBackground(new java.awt.Color(255, 255, 255));
         jPanel33.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -375,7 +375,7 @@ public class ThongKePanel extends javax.swing.JPanel {
 
         add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(513, 185, -1, -1));
 
-        jPanel36.setBackground(new java.awt.Color(119, 176, 210));
+        jPanel36.setBackground(new Color(212, 0, 0));
 
         jPanel38.setBackground(new java.awt.Color(255, 255, 255));
         jPanel38.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -422,25 +422,25 @@ public class ThongKePanel extends javax.swing.JPanel {
         jPanel38.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 218, 30));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 204, 153));
+        jLabel18.setForeground(new Color(128, 0, 0));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setText("0");
         jPanel38.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 130, 50));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(255, 204, 153));
+        jLabel19.setForeground(new Color(128, 0, 0));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setText("0");
         jPanel38.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 210, 90));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 204, 153));
+        jLabel20.setForeground(new Color(128, 0, 0));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setText("0");
         jPanel38.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 200, 90));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(255, 204, 153));
+        jLabel21.setForeground(new Color(128, 0, 0));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setText("0");
         jPanel38.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 130, 50));
@@ -464,7 +464,7 @@ public class ThongKePanel extends javax.swing.JPanel {
         add(jPanel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(759, 209, 265, -1));
 
         jLabel122.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel122.setForeground(new java.awt.Color(42, 148, 208));
+        jLabel122.setForeground(new Color(128, 0, 0));
         jLabel122.setText("THỐNG KÊ");
         add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, 30));
 
@@ -482,16 +482,16 @@ public class ThongKePanel extends javax.swing.JPanel {
         add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 210, 40));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 153, 204));
+        jLabel1.setForeground(new Color(128, 0, 0));
         jLabel1.setText("TỪ NGÀY");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 153, 204));
+        jLabel2.setForeground(new Color(128, 0, 0));
         jLabel2.setText("ĐẾN NGÀY");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, -1, -1));
 
-        jPanel6.setBackground(new java.awt.Color(42, 148, 208));
+        jPanel6.setBackground(new Color(128, 0, 0));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -506,7 +506,7 @@ public class ThongKePanel extends javax.swing.JPanel {
 
         add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 10, 30));
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 204));
+        jButton1.setBackground(new Color(128, 0, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Thống kê");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
