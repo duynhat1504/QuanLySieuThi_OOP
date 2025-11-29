@@ -46,8 +46,4 @@ public class CheckInfoSale {
     }
         
    
-//    public static void main(String[] agrv){
-//        CheckInfoSale c = new CheckInfoSale();
-//        System.out.println(c.isEnoughAmountProduct(1, 2));
-//    }
 }

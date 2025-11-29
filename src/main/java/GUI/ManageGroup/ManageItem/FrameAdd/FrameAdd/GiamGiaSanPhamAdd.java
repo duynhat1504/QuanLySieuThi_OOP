@@ -5,7 +5,6 @@ import BUS.BusAccessor.SanPhamBUS;
 import BUS.SaleServices.CheckInfoSale;
 import DataTransfer.GiamGiaSP;
 import DataTransfer.SanPham;
-import GUI.ManageGroup.Theme.NhapXuatTheme;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,7 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
-
+import com.raven.datechooser.DateChooser;
 public class GiamGiaSanPhamAdd extends javax.swing.JFrame {
     private int maKM;
     private boolean isInsert;
@@ -99,9 +98,17 @@ public class GiamGiaSanPhamAdd extends javax.swing.JFrame {
 
         txtNgayBD.setBackground(new java.awt.Color(255, 255, 255));
         giamGiaSanPhamAddBackground3.add(txtNgayBD, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 280, -1));
+        dateChooserBD = new DateChooser();
+        dateChooserBD.setTextRefernce(txtNgayBD);
+        dateChooserBD.setForeground(new java.awt.Color(128, 0, 0));
+        dateChooserBD.setDateFormat("dd-MM-yyyy");
 
         txtNgayKT.setBackground(new java.awt.Color(255, 255, 255));
         giamGiaSanPhamAddBackground3.add(txtNgayKT, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 280, -1));
+        dateChooserKT = new DateChooser();
+        dateChooserKT.setTextRefernce(txtNgayKT);
+        dateChooserKT.setForeground(new java.awt.Color(128, 0, 0));
+        dateChooserKT.setDateFormat("dd-MM-yyyy");
 
         txtPtGiam.setBackground(new java.awt.Color(255, 255, 255));
         giamGiaSanPhamAddBackground3.add(txtPtGiam, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 280, -1));
@@ -191,13 +198,13 @@ public class GiamGiaSanPhamAdd extends javax.swing.JFrame {
                 giamGiaSP.setSoPhieu(0);
                 giamGiaSP.setIsDeleted(false);
                 giamGiaSPBUS.add(giamGiaSP);
-                JOptionPane.showConfirmDialog(this, "Inserted successfully!!!", "Thông báo", JOptionPane.CLOSED_OPTION);
+                JOptionPane.showConfirmDialog(this, "Thêm thành công!!!", "Thông báo", JOptionPane.CLOSED_OPTION);
                 
             }else{
                 giamGiaSP.setSoPhieu(maKM);
                 giamGiaSP.setIsDeleted(false);
                 giamGiaSPBUS.edit(maKM, giamGiaSP);
-                JOptionPane.showConfirmDialog(this, "Updated successfully!!!", "Thông báo", JOptionPane.CLOSED_OPTION);
+                JOptionPane.showConfirmDialog(this, "Cập nhật thành công!!!", "Thông báo", JOptionPane.CLOSED_OPTION);
             }
             this.dispose();
         }
@@ -208,15 +215,8 @@ public class GiamGiaSanPhamAdd extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_shape2MouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -266,7 +266,8 @@ public class GiamGiaSanPhamAdd extends javax.swing.JFrame {
     private final SanPhamBUS sanPhamBus = new SanPhamBUS();
     private SanPham sanPham = new SanPham();
     private GiamGiaSP giamGiaSP = new GiamGiaSP();
-    private final SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+    private DateChooser dateChooserBD;
+    private DateChooser dateChooserKT;
     
     public boolean checkPtGiam(String ptGiam){
         int giam;
@@ -343,8 +344,8 @@ public class GiamGiaSanPhamAdd extends javax.swing.JFrame {
         
         if(!isInsert){
             giamGiaSP = giamGiaSPBUS.get(maKM);
-            this.txtNgayBD.setText(df.format(giamGiaSP.getNgayBD()));
-            this.txtNgayKT.setText(df.format(giamGiaSP.getNgayKT()));
+            dateChooserBD.setSelectedDate(giamGiaSP.getNgayBD());
+            dateChooserKT.setSelectedDate(giamGiaSP.getNgayKT());
             this.txtPtGiam.setText(giamGiaSP.getPtGiam()+"");
             this.txtMaSP.setText(giamGiaSP.getMaSP()+"");
             this.imagePanel1.setPath(sanPhamBus.get(giamGiaSP.getMaSP()).getHinhAnh());

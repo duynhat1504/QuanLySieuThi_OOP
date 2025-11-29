@@ -1,21 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package GUI.ManageGroup.Handle.NhanVienHandle;
 
-import BUS.BusAccessor.NhanVienBUS;
-import DataAccess.DataAccessObject.NhanVienDAO;
-import DataTransfer.NhanVien;
 import java.sql.Date;
-import java.sql.Timestamp;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
-/**
- *
- * @author MY ACER
- */
+import BUS.BusAccessor.NhanVienBUS;
+import DataTransfer.NhanVien;
+
 public class NhanVienToData {
     NhanVienBUS nhanvienBUS = new NhanVienBUS();
     private Date ngaythamgia;

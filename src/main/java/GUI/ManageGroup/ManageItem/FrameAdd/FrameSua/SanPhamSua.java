@@ -83,8 +83,8 @@ public  void Sua(SanPham sp){
         button1 = new GUI.LoginGUI.Component.Button();
         button2 = new GUI.LoginGUI.Component.Button();
         imagePanel2 = new GUI.ManageGroup.ComponentPanel.ImagePanel();
-        cbLoai = new GUI.SaleGroup.SellerGUI.Component.MyLoaiSPComboBox();
-        nhaCungCapComboBox1 = new GUI.SaleGroup.SellerGUI.Component.NhaCungCapComboBox();
+        cbLoai = new GUI.ManagerSale.Component.MyLoaiSPComboBox();
+        nhaCungCapComboBox1 = new GUI.ManagerSale.Component.NhaCungCapComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -288,7 +288,7 @@ public  void Sua(SanPham sp){
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.LoginGUI.Component.Button button1;
     private GUI.LoginGUI.Component.Button button2;
-    private GUI.SaleGroup.SellerGUI.Component.MyLoaiSPComboBox cbLoai;
+    private GUI.ManagerSale.Component.MyLoaiSPComboBox cbLoai;
     private javax.swing.JComboBox<String> cbNCC;
     private GUI.ManageGroup.ComponentPanel.ImagePanel imagePanel2;
     private javax.swing.JLabel jLabel1;
@@ -299,7 +299,7 @@ public  void Sua(SanPham sp){
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private GUI.SaleGroup.SellerGUI.Component.NhaCungCapComboBox nhaCungCapComboBox1;
+    private GUI.ManagerSale.Component.NhaCungCapComboBox nhaCungCapComboBox1;
     private GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd.SanPhamAddBackground sanPhamAddBackground1;
     private javax.swing.JTextField tfGia;
     private javax.swing.JTextField tfMaSanPham;

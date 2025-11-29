@@ -1,19 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package BUS.SaleServices;
-
-import DataAccess.DataAccessObject.*;
-import DataTransfer.*;
 
 import java.sql.Timestamp;
 import java.util.List;
 
-/**
- *
- * @author TuanMinh
- */
+import DataAccess.DataAccessObject.ChiTietHoaDonDAO;
+import DataAccess.DataAccessObject.GiamGiaSPDAO;
+import DataAccess.DataAccessObject.HoaDonDAO;
+import DataAccess.DataAccessObject.KhachHangDAO;
+import DataAccess.DataAccessObject.SanPhamDAO;
+import DataAccess.DataAccessObject.VoucherDAO;
+import DataTransfer.ChiTietHoaDon;
+import DataTransfer.GiamGiaSP;
+import DataTransfer.HoaDon;
+import DataTransfer.KhachHang;
+import DataTransfer.SanPham;
+import DataTransfer.Voucher;
+
+
 public class PayActionBus {
     private final GiamGiaSPDAO giamGiaDAO = new GiamGiaSPDAO();
     private final SanPhamDAO sanPhamDAO = new SanPhamDAO();
@@ -38,25 +41,10 @@ public class PayActionBus {
         this.maHD = hoaDonDAO.selectNewestBill().getMaHD();
     }
 
-//    public int getMaKH() {
-//        return maKH;
-//    }
 
     public void setMaKH(int maKH) {
         this.maKH = maKH;
     }
-
-//    public int getMaNV() {
-//        return maNV;
-//    }
-
-    public void setMaNV(int maNV) {
-        this.maNV = maNV;
-    }
-
-//    public int getSoVoucher() {
-//        return soVoucher;
-//    }
 
     public void setSoVoucher(String maVoucher) {
         if(check.hasVoucher(maVoucher))
@@ -64,15 +52,6 @@ public class PayActionBus {
         else this.soVoucher = 0;
     }
             
-    
-    
-    
-//    //Hàm tính giá trị giảm của sản phẩm
-//    public double discountProduct(int maSP){
-//        GiamGiaSP giamGiaSP = giamGiaDAO.selectByMaSP(maSP);
-//        SanPham sanPham = sanPhamDAO.select(maSP);
-//        return (giamGiaSP == null) ? 0 : ((giamGiaSP.getPtGiam() * sanPham.getGiaTien())*1.0 / 100);
-//    }
     
     //Hàm tính giá trị của sản phẩm sau khi giảm
     public double discountProductPrice(int maSP){

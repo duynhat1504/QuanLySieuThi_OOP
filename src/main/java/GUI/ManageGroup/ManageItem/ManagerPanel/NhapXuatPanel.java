@@ -182,7 +182,7 @@ jTable2.getTableHeader().setForeground(Color.WHITE);            // chữ trắng
         jTable1 = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        roundPanel2 = new GUI.SaleGroup.SellerGUI.Component.RoundPanel();
+        roundPanel2 = new GUI.ManagerSale.Component.RoundPanel();
         jTextField5 = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
@@ -194,7 +194,7 @@ jTable2.getTableHeader().setForeground(Color.WHITE);            // chữ trắng
         jLabel14 = new javax.swing.JLabel();
         jTextField17 = new javax.swing.JTextField();
         jTextField18 = new javax.swing.JTextField();
-        roundPanel3 = new GUI.SaleGroup.SellerGUI.Component.RoundPanel();
+        roundPanel3 = new GUI.ManagerSale.Component.RoundPanel();
         jTextField6 = new javax.swing.JTextField();
         jTextField14 = new javax.swing.JTextField();
         jTextField15 = new javax.swing.JTextField();
@@ -624,8 +624,8 @@ jTable2.getTableHeader().setForeground(Color.WHITE);            // chữ trắng
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private GUI.SaleGroup.SellerGUI.Component.RoundPanel roundPanel2;
-    private GUI.SaleGroup.SellerGUI.Component.RoundPanel roundPanel3;
+    private GUI.ManagerSale.Component.RoundPanel roundPanel2;
+    private GUI.ManagerSale.Component.RoundPanel roundPanel3;
   
     private DateChooser dateChooserNhapBd;
     private DateChooser dateChooserNhapKt;

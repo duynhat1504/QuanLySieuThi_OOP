@@ -85,7 +85,7 @@ public class SanPhamAdd extends javax.swing.JFrame {
         button1 = new GUI.LoginGUI.Component.Button();
         button2 = new GUI.LoginGUI.Component.Button();
         imagePanel2 = new GUI.ManageGroup.ComponentPanel.ImagePanel();
-        cbLoai = new GUI.SaleGroup.SellerGUI.Component.MyLoaiSPComboBox();
+        cbLoai = new GUI.ManagerSale.Component.MyLoaiSPComboBox();
         cbNCC = new javax.swing.JComboBox<>();
 
         javax.swing.GroupLayout shape1Layout = new javax.swing.GroupLayout(shape1);
@@ -292,7 +292,7 @@ public class SanPhamAdd extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private GUI.LoginGUI.Component.Button button1;
     private GUI.LoginGUI.Component.Button button2;
-    private GUI.SaleGroup.SellerGUI.Component.MyLoaiSPComboBox cbLoai;
+    private GUI.ManagerSale.Component.MyLoaiSPComboBox cbLoai;
     private javax.swing.JComboBox<String> cbNCC;
     private GUI.ManageGroup.ComponentPanel.ImagePanel imagePanel2;
     private javax.swing.JLabel jLabel1;

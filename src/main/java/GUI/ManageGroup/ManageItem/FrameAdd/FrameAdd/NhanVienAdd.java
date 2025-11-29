@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd;
 
 import BUS.BusAccessor.NhanVienBUS;
@@ -25,10 +21,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author ACER
- */
+
 public class NhanVienAdd extends javax.swing.JFrame {
         private final NhanVienValidate nhanvienValidate = new NhanVienValidate();
         private boolean isAdd;
@@ -113,8 +106,8 @@ public class NhanVienAdd extends javax.swing.JFrame {
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
         jComboBox2 = new javax.swing.JComboBox<>();
-        roundButton1 = new GUI.SaleGroup.SellerGUI.Component.RoundButton();
-        roundButton2 = new GUI.SaleGroup.SellerGUI.Component.RoundButton();
+        roundButton1 = new GUI.ManagerSale.Component.RoundButton();
+        roundButton2 = new GUI.ManagerSale.Component.RoundButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -310,8 +303,8 @@ public class NhanVienAdd extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
-    private GUI.SaleGroup.SellerGUI.Component.RoundButton roundButton1;
-    private GUI.SaleGroup.SellerGUI.Component.RoundButton roundButton2;
+    private GUI.ManagerSale.Component.RoundButton roundButton1;
+    private GUI.ManagerSale.Component.RoundButton roundButton2;
     private GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd.SanPhamAddBackground sanPhamAddBackground1;
     // End of variables declaration//GEN-END:variables
         private DateChooser dateChooserNhapNgaySinh;

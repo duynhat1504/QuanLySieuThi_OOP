@@ -1,17 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package GUI.ManageGroup.ManageItem.FrameAdd.ComponentFrameAdd;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+
 import javax.swing.JScrollPane;
 
-/**
- *
- * @author ACER
- */
 public class ScrollPaneRound  extends JScrollPane{
 
     public ScrollPaneRound() {

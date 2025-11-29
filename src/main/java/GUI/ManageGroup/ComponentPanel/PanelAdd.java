@@ -1,4 +1,3 @@
-
 package GUI.ManageGroup.ComponentPanel;
 
 import java.awt.Color;

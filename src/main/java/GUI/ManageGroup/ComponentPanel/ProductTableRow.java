@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package GUI.ManageGroup.ComponentPanel;
 
-import GUI.SaleGroup.SellerGUI.Component.RoundPanel;
+import GUI.ManagerSale.Component.RoundPanel;
 
 
 public class ProductTableRow extends RoundPanel {
@@ -31,7 +27,7 @@ public class ProductTableRow extends RoundPanel {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        imagePanel1 = new GUI.SaleGroup.SellerGUI.Component.ImagePanel();
+        imagePanel1 = new GUI.ManagerSale.Component.ImagePanel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(915, 50));
@@ -111,7 +107,7 @@ public class ProductTableRow extends RoundPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private GUI.SaleGroup.SellerGUI.Component.ImagePanel imagePanel1;
+    private GUI.ManagerSale.Component.ImagePanel imagePanel1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
