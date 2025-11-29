@@ -48,7 +48,7 @@ Ngoài ra sử dụng **DTO (Data Transfer Object)** để truyền tải dữ l
 2.  **Cấu hình Cơ sở dữ liệu:**
     - Mở MySQL Workbench hoặc phpMyAdmin.
     - Tạo database mới tên `quanlysieuthi`.
-    - Import file `sieuthimini.sql` (nằm trong thư mục `/database` của dự án).
+    - Import file `sieuthimini.sql` (nằm trong thư mục `Database` của dự án).
     - Cập nhật thông tin kết nối (user/password) trong file `dbconfig.properties`.
 3.  **Mở dự án:**
     - Khởi động NetBeans/IntelliJ IDEA/Visual Studio Code.
@@ -64,7 +64,7 @@ Dự án được thực hiện bởi nhóm sinh viên lớp Lập trình hướ
 | STT | Họ và tên | Mã sinh viên | Vai trò |
 | :--- | :--- | :--- | :--- |
 | 1 | **Hồ Duy Nhất** | N23DCCN111 | Trưởng nhóm |
-| 2 | **Khổng Phú Cường** | N23DCCN111 | Thành viên |
-| 3 | **Lê Mạnh Hùng** | N23DCCN111 | Thành viên |
-| 4 | **Trần Tấn Phát** | N23DCCN111 | Thành viên |
+| 2 | **Khổng Phú Cường** | N23DCCN076 | Thành viên |
+| 3 | **Lê Mạnh Hùng** | N23DCCN091 | Thành viên |
+| 4 | **Trần Tấn Phát** | N23DCCN113 | Thành viên |
 
