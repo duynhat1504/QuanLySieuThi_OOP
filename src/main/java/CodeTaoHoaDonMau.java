@@ -50,7 +50,7 @@ public class CodeTaoHoaDonMau {
             Voucher voucher = null;
             Long tienGiam = 0L;
             if (isHasVoucher){
-                voucher = listVoucher.get(voucherIndex);
+                voucher = listVoucher.get(voucherIndex)
                 if (tongTien>=voucher.getGiaTriToiThieu()){
                     tienGiam = voucher.getPtGiam()*tongTien ;
                     if (tienGiam > voucher.getKmToiDa())
@@ -65,8 +65,10 @@ public class CodeTaoHoaDonMau {
 //            Random generator = new Random();
 //            Long value = generator.nextLong((1653708571665L - 1650000000000L) + 1) + 1650000000000L;
             Random generator = new Random();
-            long min = 1650000000000L;
-            long max = 1653708571665L;
+           long min = 1735689600000L;   // 2025-01-01
+            long max = 1767225600000L;   // 2025-12-31
+
+
             long value = min + (long)(generator.nextDouble() * (max - min + 1));
             //             HoaDon(int maHD, Timestamp ngayHD, String hinhThuc, long tongTien, long tienGiam, int maKH, int maNV, int soKM, boolean isDeleted)
             HoaDon hd = new HoaDon(0, new Timestamp(value), "Tien mat", tongTien, tienGiam, maKH, nv.getMaNV(), voucher == null ? 1:voucher.getSoVoucher(), false);
