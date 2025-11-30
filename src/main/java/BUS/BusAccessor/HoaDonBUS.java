@@ -14,7 +14,7 @@ public class HoaDonBUS implements IBusAccess<HoaDon, Integer>{
     }
 
     @Override
-    public List<HoaDon> getAll() {
+    public List<HoaDon> getAll() {//trả về tất cả hoadon trong database
         return HoaDonDAO.selectAll();
     }
 
