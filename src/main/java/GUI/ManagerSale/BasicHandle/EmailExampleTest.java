@@ -4,6 +4,7 @@
  */
 package GUI.ManagerSale.BasicHandle;
 
+<<<<<<< HEAD
 /**
  *
  * @author MY ACER
@@ -12,6 +13,8 @@ package GUI.ManagerSale.BasicHandle;
 
 
 
+=======
+>>>>>>> 286237d45d3a9677ae15ddb0592481031c7b23e0
 public class EmailExampleTest {
     
     private static EmailExample emailExample;

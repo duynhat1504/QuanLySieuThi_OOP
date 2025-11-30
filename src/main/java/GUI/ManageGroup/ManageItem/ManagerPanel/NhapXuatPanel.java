@@ -1,6 +1,20 @@
 
 package GUI.ManageGroup.ManageItem.ManagerPanel;
 
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.sql.Timestamp;
+import java.util.List;
+
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPopupMenu;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumn;
+
+import com.raven.datechooser.DateChooser;
+import com.raven.datechooser.SelectedDate;
+
 import BUS.BusAccessor.NhanVienBUS;
 import BUS.BusAccessor.PhieuHuyBUS;
 import BUS.BusAccessor.PhieuNhapBUS;
@@ -8,19 +22,7 @@ import DataTransfer.PhieuHuy;
 import DataTransfer.PhieuNhap;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.HuyHangSanPham;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.NhapHangSanPham;
-import GUI.ManageGroup.ManageItem.ManagerFrame.ManageFrame;
 import GUI.ManageGroup.Theme.NhapHuyPanel;
-import com.raven.datechooser.DateChooser;
-import com.raven.datechooser.SelectedDate;
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.sql.Timestamp;
-import java.util.List;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPopupMenu;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumn;
 
 public class NhapXuatPanel extends javax.swing.JPanel {
     private final PhieuNhapBUS nhapBus;
