@@ -19,7 +19,7 @@ public class ConnectManager {
         DbUtils.loadDriver(JDBC_DRIVER);
         Properties properties = new Properties();
         try {
-            properties.load(new FileInputStream("D:\\PTIT D23 N23-091\\LaiPhaiTest\\QuanLySieuThi_OOP\\target\\classes\\DataAccess\\DatabaseConnector\\dbconfig.properties"));
+            properties.load(new FileInputStream("D:\\PTIT D23 N23-091\\testOOP\\QuanLySieuThi_OOP\\src\\main\\java\\DataAccess\\DatabaseConnector\\dbconfig.properties"));
             this.url = properties.getProperty("url");
             this.username = properties.getProperty("username");
             this.password = properties.getProperty("password");
