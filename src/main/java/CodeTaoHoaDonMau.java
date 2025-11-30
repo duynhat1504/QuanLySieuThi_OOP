@@ -1,11 +1,23 @@
-import BUS.BusAccessor.*;
-import DataAccess.DataAccessObject.GiamGiaSPDAO;
-import DataTransfer.*;
-
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import BUS.BusAccessor.CTHoaDonBUS;
+import BUS.BusAccessor.HoaDonBUS;
+import BUS.BusAccessor.KhachHangBUS;
+import BUS.BusAccessor.NhanVienBUS;
+import BUS.BusAccessor.SanPhamBUS;
+import BUS.BusAccessor.VoucherBUS;
+import DataAccess.DataAccessObject.GiamGiaSPDAO;
+import DataTransfer.ChiTietHoaDon;
+import DataTransfer.ChucVu;
+import DataTransfer.GiamGiaSP;
+import DataTransfer.HoaDon;
+import DataTransfer.KhachHang;
+import DataTransfer.NhanVien;
+import DataTransfer.SanPham;
+import DataTransfer.Voucher;
 
 
 
@@ -52,7 +64,7 @@ public class CodeTaoHoaDonMau {
             if (isHasVoucher){
                 voucher = listVoucher.get(voucherIndex);
                 if (tongTien>=voucher.getGiaTriToiThieu()){
-                    tienGiam = voucher.getPtGiam()*tongTien ;
+                    tienGiam = voucher.getPtGiam()*tongTien/100;
                     if (tienGiam > voucher.getKmToiDa())
                         tienGiam = voucher.getKmToiDa();
                 }
@@ -62,11 +74,11 @@ public class CodeTaoHoaDonMau {
                 nv = listNV.get(random(0, listNV.size()-1));
             }
             int maKH = listKH.get(random(0,listKH.size()-1)).getMaKH();
-//            Random generator = new Random();
-//            Long value = generator.nextLong((1653708571665L - 1650000000000L) + 1) + 1650000000000L;
             Random generator = new Random();
-            long min = 1650000000000L;
-            long max = 1653708571665L;
+            long min = 1735689600000L;   // 2025-01-01
+            long max = 1767225600000L;   // 2025-12-31
+
+
             long value = min + (long)(generator.nextDouble() * (max - min + 1));
             //             HoaDon(int maHD, Timestamp ngayHD, String hinhThuc, long tongTien, long tienGiam, int maKH, int maNV, int soKM, boolean isDeleted)
             HoaDon hd = new HoaDon(0, new Timestamp(value), "Tien mat", tongTien, tienGiam, maKH, nv.getMaNV(), voucher == null ? 1:voucher.getSoVoucher(), false);
