@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+
 import org.apache.commons.dbutils.DbUtils;
 
 public class ConnectManager {
@@ -19,7 +20,7 @@ public class ConnectManager {
         DbUtils.loadDriver(JDBC_DRIVER);
         Properties properties = new Properties();
         try {
-            properties.load(new FileInputStream("src/main/java/DataAccess/DatabaseConnector/dbconfig.properties"));
+            properties.load(new FileInputStream("D:\\DuyNhat\\Java\\quanlysieuthi\\src\\main\\java\\DataAccess\\DatabaseConnector\\dbconfig.properties"));
             this.url = properties.getProperty("url");
             this.username = properties.getProperty("username");
             this.password = properties.getProperty("password");
