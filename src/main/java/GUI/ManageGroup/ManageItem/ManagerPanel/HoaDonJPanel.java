@@ -75,7 +75,7 @@ public class HoaDonJPanel extends javax.swing.JPanel {
         jt.getTableHeader().setBackground(new Color(128,0,0));
         jt.getTableHeader().setForeground(new Color(255,255,255));
     }
-    public void DatatoTable(){
+    public void DatatoTable(){//đổ dữ liệu từ danh sách hóa đơn vào bảng
         int i=0;
         if (hdList == null)
             return;
@@ -90,7 +90,7 @@ public class HoaDonJPanel extends javax.swing.JPanel {
     }
     
     public void reFreshTable(){
-        hdList = hoaDonBUS.getAll();
+        hdList = hoaDonBUS.getAll();//tải danh sach hoa don khi mo giao dien
         modelJTABLE2.setRowCount(0);
         DatatoTable();
     }
@@ -352,18 +352,17 @@ public class HoaDonJPanel extends javax.swing.JPanel {
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 410, 80, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JTable2mouseclick(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JTable2mouseclick
-        // TODO add your handling code here:
+    private void JTable2mouseclick(java.awt.event.MouseEvent evt) { //hàm sử lý sự kiến khi click vào bảng hóa đơn
         int soluong=0;
-        String i=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(),0));
-        jLabel1.setText("");
-        jLabel2.setText("");
-        jLabel5.setText("");
-        jLabel4.setText("");
-        jTable1.setModel(new DefaultTableModel(null,new String[]{"Mã sản phẩm","Tên sản phẩm","Số lượng","Giá"}));
-        modelJTABLE1= (DefaultTableModel) jTable1.getModel();
-        HoaDon hd= hoaDonBUS.get(Integer.parseInt(i));
-        List<ChiTietHoaDon> listChiTiet = cthoaDonDAO.selectAllById1(hd.getMaHD());
+        String i=String.valueOf(jTable2.getValueAt(jTable2.getSelectedRow(),0));//lay mã hóa đơn của hàng được chọn
+        jLabel1.setText("");//tong tien
+        jLabel2.setText("");// so luong
+        jLabel5.setText("");//tien giam
+        jLabel4.setText("");// tong thanh toan
+        jTable1.setModel(new DefaultTableModel(null,new String[]{"Mã sản phẩm","Tên sản phẩm","Số lượng","Giá"}));//tao moi model cho bang chi tiet hoa don
+        modelJTABLE1= (DefaultTableModel) jTable1.getModel();//gan model cho bang chi tiet hoa don
+        HoaDon hd= hoaDonBUS.get(Integer.parseInt(i)); //lay hoa don dua vao ma hoa don vua lay duoc
+        List<ChiTietHoaDon> listChiTiet = cthoaDonDAO.selectAllById1(hd.getMaHD());//lay danh sach chi tiet hoa don dua vao ma hoa don
         for (ChiTietHoaDon cthd : listChiTiet) {
             SanPham sp = sanPhamBUS.get(cthd.getMaSP());
             soluong+=cthd.getSoLuong();
@@ -381,9 +380,9 @@ public class HoaDonJPanel extends javax.swing.JPanel {
 
     private void button18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button18ActionPerformed
         // Tìm kiếm theo mã hóa đơn
-        boolean test = false;
+        boolean test = false;//biến kiểm tra có tìm thấy hay không
         
-        if(jTextField9.getText().equals("")){
+        if(jTextField9.getText().equals("")){//nếu ô tìm kiếm rỗng
             JOptionPane.showMessageDialog(null, "NHẬP MÃ HÓA ĐƠN VÀO MỤC TÌM KIẾM");
         }
         else{
@@ -394,7 +393,7 @@ public class HoaDonJPanel extends javax.swing.JPanel {
                     NhanVien nv= nhanVienBUS.get(hd.getMaNV());
                     KhachHang kh= khachHangBUS.get(hd.getMaKH());
                     modelJTABLE2.addRow(new Object[]{hd.getMaHD(),hd.getMaKH(),kh.getTenKH(),hd.getMaNV(),nv.getTenNV(),hd.getNgayHD()});
-                    test=true;
+                    test=true;//đã tìm thấy
                 }
             }
             if(!test) JOptionPane.showMessageDialog(null, "KOTIMTHAY");
@@ -412,7 +411,7 @@ public class HoaDonJPanel extends javax.swing.JPanel {
         }
     }
 
-    private void button19ActionPerformed(java.awt.event.ActionEvent evt) {
+    private void button19ActionPerformed(java.awt.event.ActionEvent evt) {//Lọc hóa đơn theo thời gian, mã nhân viên, mã khách hàng
         // so sánh ngày
         SimpleDateFormat sdf=new SimpleDateFormat("dd-MM-yyyy");
 
@@ -477,7 +476,7 @@ public class HoaDonJPanel extends javax.swing.JPanel {
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
-        reFreshTable();
+        reFreshTable();//làm mới bảng
     }
 
     public static void main(String[] argv){

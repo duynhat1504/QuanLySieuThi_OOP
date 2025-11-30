@@ -39,7 +39,7 @@ public class HoaDonDAO extends AbstractAccessData<HoaDon> implements ISimpleAcce
     }
 
     @Override
-    public List<HoaDon> selectAll() {
+    public List<HoaDon> selectAll() {//trả về tất cả hoadon trong database
         return executeQueryList("SELECT * FROM HOADON WHERE IS_DELETED = 0");
     }
     

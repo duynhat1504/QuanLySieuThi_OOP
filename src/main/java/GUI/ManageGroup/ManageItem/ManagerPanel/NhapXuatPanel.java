@@ -38,7 +38,7 @@ public class NhapXuatPanel extends javax.swing.JPanel {
         nhapBus = new PhieuNhapBUS();
         nvBus = new NhanVienBUS();
         huyBus = new PhieuHuyBUS();
-        setUpPanel();
+        setUpPanel();                                                                          
         loadPhieuNhapFromDB();
         loadPhieuHuyFromDB();
     }
@@ -147,10 +147,10 @@ jTable2.getTableHeader().setForeground(Color.WHITE);            // chữ trắng
         }
     }
     
-    private void loadPhieuNhapFromDB(){
-        List<PhieuNhap> list = nhapBus.getAll();
-        nhapModel.setRowCount(0);
-        if (list == null || list.isEmpty()) return;
+    private void loadPhieuNhapFromDB(){//load phieu nhap tu db
+        List<PhieuNhap> list = nhapBus.getAll();//lay tat ca phieu nhap
+        nhapModel.setRowCount(0);//xoa du lieu cu tren table
+        if (list == null || list.isEmpty()) return;//neu khong co du lieu thi thoat
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         for (PhieuNhap item: list){
             model.addRow(new Object[]{item.getMaPhieu(),item.getMaNV(),nvBus.get(item.getMaNV()).getTenNV(),item.getNgayLap()});
@@ -533,7 +533,7 @@ jTable2.getTableHeader().setForeground(Color.WHITE);            // chữ trắng
         }
     }
     // Xoa loc ket qua phieu nhap
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {
         jTextField16.setText("");
         jTextField18.setText("");
         nhapModel.setRowCount(0);
@@ -545,13 +545,13 @@ jTable2.getTableHeader().setForeground(Color.WHITE);            // chữ trắng
         int maPNMoiNhat = nhapBus.getNewest().getMaPhieu()+1;
         new NhapHangSanPham(maPNMoiNhat,this.maNhanVien, true).setVisible(true);
     }
-
+    // Them phieu huy
     private void button15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button15ActionPerformed
       
         int maPHMoiNhat = huyBus.getNewest().getMaPhieu()+1;
         new HuyHangSanPham(maPHMoiNhat,this.maNhanVien, true).setVisible(true);
     }
-
+// Tim kiem cua phieu huy
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         SelectedDate huyBd = dateChooserHuyBd.getSelectedDate();
         SelectedDate huyKt = dateChooserHuyKt.getSelectedDate();
@@ -576,11 +576,11 @@ jTable2.getTableHeader().setForeground(Color.WHITE);            // chữ trắng
         huyModel.setRowCount(0);
         loadPhieuHuyFromDB();
     }
-
+// Xoa loc ket qua phieu huy
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         jButton5ActionPerformed(evt);
     }
-
+// Refresh phieu nhap
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jButton7ActionPerformed(evt);
     }
