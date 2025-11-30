@@ -36,10 +36,7 @@ import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellEditor;
 
-/**
- *
- * @author ACER
- */
+
 public class NhapHangSanPham extends javax.swing.JFrame {
     private final CTPhieuNhapBUS ctPhieuNhapBus;
     private final NhanVienBUS nhanvienBus;

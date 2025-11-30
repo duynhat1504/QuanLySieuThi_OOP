@@ -3,12 +3,10 @@ package GUI.ManagerSale.Component;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+
 import javax.swing.JButton;
 
-/**
- *
- * @author huykh
- */
+
 public class RoundButton extends JButton{
 
     {

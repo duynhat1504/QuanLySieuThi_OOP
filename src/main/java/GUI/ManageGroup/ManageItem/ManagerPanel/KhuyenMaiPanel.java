@@ -24,13 +24,9 @@ import BUS.BusAccessor.VoucherBUS;
 import DataTransfer.GiamGiaSP;
 import DataTransfer.SanPham;
 import DataTransfer.Voucher;
-import GUI.LoginGUI.Component.Button;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.GiamGiaSanPhamAdd;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.VoucherAdd;
-/**
- *
- * @author ACER, TUANMINH
- */
+
 public class KhuyenMaiPanel extends javax.swing.JPanel { 
     public KhuyenMaiPanel() {
         FlatLightLaf.setup();

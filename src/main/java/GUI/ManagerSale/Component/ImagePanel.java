@@ -7,15 +7,14 @@ package GUI.ManagerSale.Component;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
+
 import org.imgscalr.Scalr;
 
-/**
- *
- * @author huykh
- */
+
 public class ImagePanel extends JPanel{
     private ImageIcon image;
     private BufferedImage bufferedImage;
