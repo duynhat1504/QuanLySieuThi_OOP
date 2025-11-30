@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🛒 QUẢN LÝ SIÊU THỊ MINI (MINI SUPERMARKET MANAGEMENT)
 
 > **Đồ án môn học: Lập trình Hướng đối tượng (OOP)** - **Học viện Công nghệ Bưu chính Viễn thông cơ sở TP Hồ Chí Minh**
@@ -69,7 +68,6 @@ Dự án được thực hiện bởi nhóm sinh viên lớp Lập trình hướ
 | 3 | **Lê Mạnh Hùng** | N23DCCN111 | Thành viên |
 | 4 | **Trần Tấn Phát** | N23DCCN111 | Thành viên |
 
-=======
 # 🛒 QUẢN LÝ SIÊU THỊ MINI (MINI SUPERMARKET MANAGEMENT)
 
 > **Đồ án môn học: Lập trình Hướng đối tượng (OOP)** - **Học viện Công nghệ Bưu chính Viễn thông cơ sở TP Hồ Chí Minh**
@@ -140,4 +138,4 @@ Dự án được thực hiện bởi nhóm sinh viên lớp Lập trình hướ
 | 3 | **Lê Mạnh Hùng** | N23DCCN091 | Thành viên |
 | 4 | **Trần Tấn Phát** | N23DCCN113 | Thành viên |
 
->>>>>>> 286237d45d3a9677ae15ddb0592481031c7b23e0
+
