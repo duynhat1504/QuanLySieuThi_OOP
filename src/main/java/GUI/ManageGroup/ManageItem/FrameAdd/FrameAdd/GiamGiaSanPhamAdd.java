@@ -192,7 +192,10 @@ public class GiamGiaSanPhamAdd extends javax.swing.JFrame {
 
     private void shape1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_shape1MouseClicked
         // TODO add your handling code here:
-        boolean check = isValidDate(txtNgayBD.getText(), txtNgayKT.getText()) && checkPtGiam(txtPtGiam.getText()) && hasProductId(txtMaSP.getText());
+        boolean check = isValidDate(txtNgayBD.getText(), txtNgayKT.getText()) 
+                        && checkPtGiam(txtPtGiam.getText()) 
+                        && hasProductId(txtMaSP.getText()) 
+                        && checkProductDiscountExist(txtMaSP.getText());
         if(check){
             if(isInsert){
                 giamGiaSP.setSoPhieu(0);
@@ -285,6 +288,15 @@ public class GiamGiaSanPhamAdd extends javax.swing.JFrame {
         return true;
     }
     
+    public boolean checkProductDiscountExist(String productId){
+        int maSP = Integer.parseInt(productId);
+        if(checkInfo.hasProductDiscount(maSP)){
+            JOptionPane.showConfirmDialog(this, "Sản phẩm đã có chương trình giảm giá!!!", "Chú ý!", JOptionPane.CLOSED_OPTION);
+            return false;
+        }
+        return true;
+    }
+
     public boolean hasProductId(String productId){
         int id;
         try{

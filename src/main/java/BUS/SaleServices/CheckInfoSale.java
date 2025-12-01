@@ -1,6 +1,7 @@
 package BUS.SaleServices;
 
 
+import DataAccess.DataAccessObject.GiamGiaSPDAO;
 import DataAccess.DataAccessObject.KhachHangDAO;
 import DataAccess.DataAccessObject.SanPhamDAO;
 import DataAccess.DataAccessObject.VoucherDAO;
@@ -11,6 +12,7 @@ public class CheckInfoSale {
     private final SanPhamDAO spDAO = new SanPhamDAO();
     private final KhachHangDAO khDAO = new KhachHangDAO();
     private final VoucherDAO voucherDAO = new VoucherDAO();
+    private final GiamGiaSPDAO giamGiaSPDAO = new GiamGiaSPDAO();
 //    private KhachHang khachHang;
     
     
@@ -35,6 +37,10 @@ public class CheckInfoSale {
     
     public boolean hasVoucher(String maVoucher){
         return voucherDAO.select(maVoucher) != null;
+    }
+    
+    public boolean hasProductDiscount(int maSP){
+        return giamGiaSPDAO.selectByMaSP(maSP) != null;
     }
     
     //Hàm này được gọi sau khi kiểm tra khách hàng đã tồn tại
