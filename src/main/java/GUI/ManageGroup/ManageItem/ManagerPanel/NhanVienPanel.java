@@ -9,10 +9,6 @@ import BUS.BusAccessor.NhanVienBUS;
 import DataTransfer.ChucVu;
 import DataTransfer.NhanVien;
 import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.NhanVienAdd;
-import GUI.ManageGroup.ManageItem.FrameAdd.FrameAdd.SanPhamAdd;
-import java.awt.PopupMenu;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.util.List;
 import java.util.regex.PatternSyntaxException;
@@ -81,7 +77,6 @@ public class NhanVienPanel extends javax.swing.JPanel {
         jTextField7 = new javax.swing.JTextField();
         jLabel84 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
-        button10 = new GUI.LoginGUI.Component.Button();
         button11 = new GUI.LoginGUI.Component.Button();
         button12 = new GUI.LoginGUI.Component.Button();
         button13 = new GUI.LoginGUI.Component.Button();
@@ -174,13 +169,7 @@ public class NhanVienPanel extends javax.swing.JPanel {
 
         add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 10, 30));
 
-        // button10.setBackground(new java.awt.Color(128, 0, 0));
-        // button10.setForeground(new java.awt.Color(255, 255, 255));
-        // button10.setText("XUẤT EXCEL");
-        // button10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        // button10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        // add(button10, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 110,
-        // 30));
+
 
         button11.setBackground(new java.awt.Color(128, 0, 0));
         button11.setForeground(new java.awt.Color(255, 255, 255));
@@ -211,13 +200,6 @@ public class NhanVienPanel extends javax.swing.JPanel {
         });
         add(button12, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 410, 90, 30));
 
-        // button13.setBackground(new java.awt.Color(128, 0, 0));
-        // button13.setForeground(new java.awt.Color(255, 255, 255));
-        // button13.setText("NHẬP EXCEL");
-        // button13.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        // button13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        // add(button13, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 10, 110,
-        // 30));
 
         shape13.setBackground(new java.awt.Color(128, 0, 0));
         shape13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -468,7 +450,7 @@ public class NhanVienPanel extends javax.swing.JPanel {
     }// GEN-LAST:event_editActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private GUI.LoginGUI.Component.Button button10;
+
     private GUI.LoginGUI.Component.Button button11;
     private GUI.LoginGUI.Component.Button button12;
     private GUI.LoginGUI.Component.Button button13;

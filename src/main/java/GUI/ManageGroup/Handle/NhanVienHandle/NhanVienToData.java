@@ -4,30 +4,31 @@ import java.sql.Date;
 import java.text.ParseException;
 
 import BUS.BusAccessor.NhanVienBUS;
-import DataTransfer.NhanVien;
+import DataTransfer.NhanVien;   
 
 public class NhanVienToData {
+    //set gia tri cho mot object NhanVien
     NhanVienBUS nhanvienBUS = new NhanVienBUS();
     private Date ngaythamgia;
-    
-    public boolean AddNhanVien(String tenNhanVien, String soDienThoai, String cmnd, int gioiTinh, Date ngaySinh, String email, String diachi, Date ngayThamGia, int maChucVu) throws ParseException {
+
+    public boolean AddNhanVien(String tenNhanVien, String soDienThoai, String cmnd, int gioiTinh, Date ngaySinh,
+            String email, String diachi, Date ngayThamGia, int maChucVu) throws ParseException {
         NhanVien nhanVien = new NhanVien();
         nhanVien.setTenNV(tenNhanVien);
         nhanVien.setSoDienThoai(soDienThoai);
         nhanVien.setCmnd(cmnd);
         boolean testGioiTinh = true;
-        if(gioiTinh == 0)  testGioiTinh = false;
+        if (gioiTinh == 0)
+            testGioiTinh = false;
         nhanVien.setGioiTinh(testGioiTinh);
-         System.out.println(ngaySinh);
-         nhanVien.setEmail(email);
-         nhanVien.setDiaChi(diachi);
-         nhanVien.setNgaySinh(ngaySinh);
-         nhanVien.setNgayThamGia(ngayThamGia);
-          nhanVien.setMaChucVu(maChucVu);
-          System.out.println(nhanVien.toString());
+        System.out.println(ngaySinh);
+        nhanVien.setEmail(email);
+        nhanVien.setDiaChi(diachi);
+        nhanVien.setNgaySinh(ngaySinh);
+        nhanVien.setNgayThamGia(ngayThamGia);
+        nhanVien.setMaChucVu(maChucVu);
+        System.out.println(nhanVien.toString());
         return nhanvienBUS.add(nhanVien);
     }
-    
-    
-    
+
 }
