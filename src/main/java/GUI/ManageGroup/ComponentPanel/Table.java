@@ -6,10 +6,7 @@ package GUI.ManageGroup.ComponentPanel;
 
 import javax.swing.JTable;
 
-/**
- *
- * @author ACER
- */
+
 public class Table  extends JTable{
 
 

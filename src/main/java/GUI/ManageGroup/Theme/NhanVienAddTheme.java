@@ -6,10 +6,7 @@ package GUI.ManageGroup.Theme;
 
 import com.formdev.flatlaf.FlatLightLaf;
 
-/**
- *
- * @author MY ACER
- */
+
 public class NhanVienAddTheme extends FlatLightLaf {
     public static final String NAME = "NhanVienAddTheme";
 

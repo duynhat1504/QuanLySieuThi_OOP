@@ -6,10 +6,7 @@ import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
-/**
- *
- * @author huykh
- */
+
 public class RoundPanel extends JPanel{
 
     {

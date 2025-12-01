@@ -23,10 +23,7 @@ import java.sql.Timestamp;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author ACER
- */
+
 public class ThongKePanel extends javax.swing.JPanel {
     private final PhieuNhapBUS nhapBUS = new PhieuNhapBUS();
     private final PhieuHuyBUS huyBUS = new PhieuHuyBUS();

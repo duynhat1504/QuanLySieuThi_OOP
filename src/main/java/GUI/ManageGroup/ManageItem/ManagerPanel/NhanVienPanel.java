@@ -21,10 +21,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
-/**
- *
- * @author ACER
- */
+
 public class NhanVienPanel extends javax.swing.JPanel {
     private final NhanVienBUS nhanvienBUS = new NhanVienBUS();
     private final ChucVuBUS chucvuBUS = new ChucVuBUS();

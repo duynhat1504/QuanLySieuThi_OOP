@@ -18,10 +18,6 @@ import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 
-/**
- *
- * @author ACER
- */
 public class SanPhamSua extends javax.swing.JFrame {
    private String url ;
       SanPhamValidate spVali = new SanPhamValidate();

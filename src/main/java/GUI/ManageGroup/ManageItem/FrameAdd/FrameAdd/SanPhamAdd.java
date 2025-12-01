@@ -20,10 +20,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-/**
- *
- * @author ACER
- */
+
 public class SanPhamAdd extends javax.swing.JFrame {
     private String url;
     SanPhamBUS sanphamBUS = new SanPhamBUS();

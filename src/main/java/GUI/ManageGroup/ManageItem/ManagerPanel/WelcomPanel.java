@@ -4,10 +4,7 @@
  */
 package GUI.ManageGroup.ManageItem.ManagerPanel;
 
-/**
- *
- * @author ACER
- */
+
 public class WelcomPanel extends javax.swing.JPanel {
 
     /**
