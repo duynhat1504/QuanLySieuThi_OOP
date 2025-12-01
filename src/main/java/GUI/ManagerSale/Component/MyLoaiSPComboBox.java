@@ -12,10 +12,7 @@ import BUS.BusAccessor.LoaiSanPhamBUS;
 import DataTransfer.LoaiSanPham;
 import GUI.ManagerSale.BasicHandle.ComboboxLoaiSanPhamRender;
 
-/**
- *
- * @author huykh
- */
+
 public class MyLoaiSPComboBox extends JComboBox<LoaiSanPham>{
     private final LoaiSanPhamBUS loaispBUS = new LoaiSanPhamBUS();
     

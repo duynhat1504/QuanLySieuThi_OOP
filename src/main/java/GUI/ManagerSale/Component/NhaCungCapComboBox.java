@@ -4,19 +4,17 @@
  */
 package GUI.ManagerSale.Component;
 
-import BUS.BusAccessor.NhaCungCapBUS;
-import DataTransfer.LoaiSanPham;
-import DataTransfer.NhaCungCap;
 import java.awt.Component;
 import java.util.List;
+
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
 import javax.swing.JList;
 
-/**
- *
- * @author huykh
- */
+import BUS.BusAccessor.NhaCungCapBUS;
+import DataTransfer.NhaCungCap;
+
+
 public class NhaCungCapComboBox extends JComboBox<NhaCungCap>{
     private NhaCungCapBUS nccBus = new NhaCungCapBUS();
     
