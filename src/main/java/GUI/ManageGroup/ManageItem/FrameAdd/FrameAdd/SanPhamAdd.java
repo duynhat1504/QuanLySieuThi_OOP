@@ -9,9 +9,7 @@ import BUS.BusAccessor.NhaCungCapBUS;
 import BUS.BusAccessor.SanPhamBUS;
 import GUI.ManageGroup.Handle.SanPhamHandle.SanPhamToData;
 import GUI.ManageGroup.Handle.SanPhamHandle.SanPhamValidate;
-import DataTransfer.LoaiSanPham;
 import DataTransfer.NhaCungCap;
-import DataTransfer.SanPham;
 import GUI.ManageGroup.ManageItem.ManagerPanel.SanPhamPanel;
 import java.awt.Color;
 import java.io.File;
@@ -32,7 +30,7 @@ public class SanPhamAdd extends javax.swing.JFrame {
 
     public SanPhamAdd() {
         initComponents();
-        this.setDefaultCloseOperation(0);
+        this.setDefaultCloseOperation(2);
         Loadcb();
         // Tạo mã sản phẩm mới
         tfMaSanPham.setText(String.valueOf(sanphamBUS.getNewest().getMaSP() + 1));
